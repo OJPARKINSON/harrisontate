@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import './Header.css'
 import React from 'react'
 
+//https://css-tricks.com/snippets/css/complete-guide-grid/
+
 class Header extends React.Component {
   constructor(props) {
     super(props)
@@ -31,7 +33,7 @@ class Header extends React.Component {
           <h1>Harrison Tate</h1>
           <Link className="Photos" to="/Photos">Photos</Link>
           <Link className="Videos" to="/Photos">Videos</Link>
-          <Link className="Flare" to="/Flare">Flare logo</Link>
+          <Link  to="/Flare" ><img className="Flare" src={require('../images/FlareLogo.png')} /></Link>
         </div>
       </div>
     )
