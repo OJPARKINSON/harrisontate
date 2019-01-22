@@ -33,7 +33,7 @@ class Header extends React.Component {
           <h1>Harrison Tate</h1>
           <Link className="Photos" to="/Photos">Photos</Link>
           <Link className="Videos" to="/Photos">Videos</Link>
-          <Link  to="/Flare" ><img className="Flare" src={require('../images/FlareLogo.png')} /></Link>
+          <Link  to="/Flare" ><img className="Flare" src={require("../images/FlareLogo.png")} /></Link>
         </div>
       </div>
     )
