@@ -1,7 +1,6 @@
 .Header {
     position: fixed;
     width: 100%;
-    padding: 0.5vw 0px;
     z-index: 100;
     transition: 0.8s cubic-bezier(0.02, 0.8, 0.2, 1);
 }
@@ -12,10 +11,11 @@
     align-items: center;
     justify-items: center;
 }
-.Header a {
+.Header a, .link {
     color: white;
     font-size: 1.5rem;
     font-weight: 700;
+    filter: none;
 }
 .Flare {
     grid-column-start: 8;
@@ -23,19 +23,19 @@
     height: 100px;
 }
 .Photos {
-    grid-column-start: 6;
-}
-.Videos {
     grid-column-start: 7;
+}
+.LookBook {
+    grid-column-start: 8;
 
 }
 h1 {
     color: white;
 }
 .HeaderScrolled {
-    background: rgba(8, 9, 11, 0.8);
-    padding: 15px 0;
     backdrop-filter: blur(20px);
+    background: rgba(8, 9, 11, 0.8);
+
 }
 
 @media (max-width: 640px) {

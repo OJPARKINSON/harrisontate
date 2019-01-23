@@ -7,9 +7,11 @@ body {
 
 }
 a {
-  color: #5334f5;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
   text-decoration: none;
-  font-weight: 600;
+  filter: none;
 }
 .Hero {
   background-image: url('../images/harrisonlanding.jpg');
@@ -24,12 +26,13 @@ a {
   padding: 150px 50px;
   text-align: center;
 }
-.Hero h1 {
-  margin: 0;
+.HeaderGroup h1 {
+  margin: 1.5vh 0;
   color: white;
-  font-size: 60px;
-  line-height: 1.2;
-  opacity: 0;
+  font-size: 40px;
+
+}
+.firstPage h1{
   animation: HeroAnimation 3s forwards cubic-bezier(0.02, 0.8, 0.2, 1);
   animation-delay: 0.15s;
   opacity: 0;
@@ -40,7 +43,7 @@ a {
   line-height: 1.5;
   animation: HeroAnimation 3s forwards cubic-bezier(0.02, 0.8, 0.2, 1);
 }
-.heroPics {
+.heroTitles {
   width: 100%;
   position: relative;
   text-align: center;
@@ -77,16 +80,21 @@ h2 {
   top: 0;
   overflow: hidden;
   display: grid;
-  grid-gap: 1vw;
+  grid-gap: 2vw;
   grid-template-columns: repeat(3, auto);
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-  margin: 0 auto;  
+  margin: 0 auto 8vh auto;  
   align-items: center;
   justify-items: center;
 }
 .imageContanier img {
   height: 45vw;
   width: 100%;
+}
+iframe {
+  width: 77%;
+  height: 75vh;
+  margin-bottom: 8vh;
 }
 
 
