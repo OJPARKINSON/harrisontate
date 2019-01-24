@@ -1,7 +1,9 @@
 import React from 'react'
 import Header2 from '../components/header2'
 import SEO from '../components/seo'
-import Card from '../components/card';
+import CardImg from '../components/cardImg'
+
+
 
 const SecondPage = () => (
   <div className="container2">
@@ -11,7 +13,14 @@ const SecondPage = () => (
     <div className="imgContainer">
       <img className="FlareLogo" alt="" src={require("../images/FlareLogo.png")} />
     </div>
-    <Card image={require('../images/AIDAN2GIF.gif')} text="hello"></Card>
+    <CardImg image={require('../images/AIDAN2GIF.gif')} text=""></CardImg>
+    <CardImg image={require('../images/MEGIF.gif')} text=""></CardImg>
+    <CardImg image={require('../images/MOSHED.gif')} text=""></CardImg>
+    <CardImg image={require('../images/giffy3.gif')} text=""></CardImg>
+    <CardImg image={require('../images/giffy1.gif')} text=""></CardImg>
+    <div className="heroTitles">
+      <iframe allowFullScreen src="https://www.youtube.com/embed/sjHPpqmbYNo" rel="0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+    </div>
   </div>  
 )
 
