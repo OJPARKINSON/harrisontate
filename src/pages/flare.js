@@ -8,8 +8,7 @@ import CardImg from '../components/cardImg'
 const SecondPage = () => (
   <div className="container2">
     <SEO title="Flare"/>
-    <Header2 title="Flare"> 
-    </Header2>
+    <Header2 title="Flae" Link2="Harrison Tate"></Header2>
     <div className="imgContainer">
       <img className="FlareLogo" alt="" src={require("../images/FlareLogo.png")} />
     </div>
@@ -19,7 +18,7 @@ const SecondPage = () => (
     <CardImg image={require('../images/giffy3.gif')} text=""></CardImg>
     <CardImg image={require('../images/giffy1.gif')} text=""></CardImg>
     <div className="heroTitles">
-      <iframe allowFullScreen src="https://www.youtube.com/embed/sjHPpqmbYNo" rel="0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+      <iframe title="lookbook2" allowFullScreen src="https://www.youtube.com/embed/sjHPpqmbYNo" rel="0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
     </div>
   </div>  
 )

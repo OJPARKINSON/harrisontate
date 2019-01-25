@@ -100,7 +100,11 @@ iframe {
 }
 .container2 {  
   background: black;
-
+  width: 100%;
+  margin: 0 auto;
+}
+.container3 {  
+  background: white;
   width: 100%;
   margin: 0 auto;
 }
@@ -131,4 +135,27 @@ iframe {
   align-self: center;
   margin: 0 0 20px 20px;
 }
-
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 1px;
+}
+.column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 100%;
+  padding: 0 1px;
+}
+.column img {
+  vertical-align: middle;
+  width: 95%;
+}
+#img-container div img {
+  padding: 4%;
+}
+#img-container {
+  margin: 0 auto;
+  width: 95%;
+}
