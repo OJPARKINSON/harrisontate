@@ -10,7 +10,7 @@ const SecondPage = () => (
     <SEO title="Flare"/>
     <Header2 title="Flae" Link2="Harrison Tate"></Header2>
     <div className="imgContainer">
-      <img className="FlareLogo" alt="" src={require("../images/FlareLogo.png")} />
+      <img className="FlareLogo" alt="" src={require("../images/FlareLogoCompressed-min.png")} />
     </div>
     <CardImg image={require('../images/AIDAN2GIF.gif')} text=""></CardImg>
     <CardImg image={require('../images/MEGIF.gif')} text=""></CardImg>
