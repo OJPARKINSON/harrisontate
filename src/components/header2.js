@@ -8,9 +8,9 @@ import React from 'react'
 const header2 = props => (
     <div className="HeaderScrolled">
         <div className="HeaderGroup">
-        <Link to="/"><h1>Harrison Tate</h1></Link>
-        <Link className="Photos" to="/Photos">Photos</Link>
-        <Link className="Lookbook" to="/flare">Flare</Link>
+        <Link to={props.firstLink}><h1>{props.title}</h1></Link>
+        <Link className="Photos" to={props.secondLink}>{props.LinkedOne}</Link>
+        <Link className="Lookbook" to={props.thirdLink}>{props.LinkedTwo}</Link>
         </div>
     </div>
 )

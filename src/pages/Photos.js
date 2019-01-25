@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 const SecondPage = () => (
 <div className="container3">
     <SEO title="Photos"/>
-    <Header2 title="Flae" Link2="Harrison Tate"></Header2>
+    <Header2 title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="/Photos" secondLink="" thirdLink="/flare"/>
     <div id="img-container" className="row">
         <div className="column">
             <img src={require('../images/red/crane-r9-min.jpg')}  alt="image of buidling under construction in distance"/>
