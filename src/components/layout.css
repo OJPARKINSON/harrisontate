@@ -95,7 +95,7 @@ h2 {
     grid-template-columns: repeat(2ç, auto) !important;
   }
   .imageContanier img {
-    height: 70vw !important;
+    height: 50vw !important;
   }
 }
 .imageContanier {
