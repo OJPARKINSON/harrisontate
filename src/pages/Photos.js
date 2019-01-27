@@ -1,5 +1,6 @@
 import React from 'react'
 import Header2 from '../components/header2'
+import '../components/layout.css'
 import SEO from '../components/seo'
 
 const SecondPage = () => (
@@ -11,7 +12,7 @@ const SecondPage = () => (
             <img src={require('../images/red/crane-r9-min.jpg')}  alt="buidling under construction in distance"/>
             <img src={require('../images/green/DSC_0206.jpg')}  alt="shopping center in leeds"/> 
             <img src={require('../images/green/abi-and-elise.jpg')}   alt="two Photographers down narrow street"/>
-            <img src={require('../images/green/DSC_0294.jpg')}   alt="a couple on a bridge"/>
+            <img src={require('../images/green/DSC_0294.jpg')} alt="a couple on a bridge"/>
             <img src={require('../images/green/DSC_0947.jpg')}   alt="teenager on steps in a street"/>
             <img src={require('../images/green/GWINDOW.jpg')}   alt="a reflection of a highstreet"/>
             <img src={require('../images/green/JAYGO.jpg')}   alt="dog running in field"/>
