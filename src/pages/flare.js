@@ -17,11 +17,11 @@ const SecondPage = () => (
     <div className="imgContainer">
       <img className="FlareLogo" alt="" src={require("../images/FlareLogoCompressed-min.png")} />
     </div>
-    <CardImg image={require('../images/AIDAN2GIF.gif')} text=""></CardImg>
-    <CardImg image={require('../images/MEGIF.gif')} text=""></CardImg>
-    <CardImg image={require('../images/MOSHED.gif')} text=""></CardImg>
-    <CardImg image={require('../images/giffy3.gif')} text=""></CardImg>
-    <CardImg image={require('../images/giffy1.gif')} text=""></CardImg>
+    <CardImg image={require('../images/AIDAN2GIF.gif')} alternative=""></CardImg>
+    <CardImg image={require('../images/MEGIF.gif')} alternative=""></CardImg>
+    <CardImg image={require('../images/MOSHED.gif')} alternative=""></CardImg>
+    <CardImg image={require('../images/giffy3.gif')} alternative=""></CardImg>
+    <CardImg image={require('../images/giffy1.gif')} alternative=""></CardImg>
     <div className="heroTitles">
       <iframe title="lookbook2" allowFullScreen src="https://www.youtube.com/embed/sjHPpqmbYNo" rel="0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
     </div>

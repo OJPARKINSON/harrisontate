@@ -85,9 +85,6 @@ h2 {
   h1 {
     font-size: 25px !important;
   }
-  .Photos {
-    grid-column-start: 5 !important;
-  }
   a{
     margin: 0 10px;
   }
@@ -174,10 +171,10 @@ iframe {
   vertical-align: middle;
   width: 95%;
 }
-#img-container div img {
-  padding: 4%;
-}
 #img-container {
   margin: 0 auto;
   width: 95%;
+}
+#img-container div img {
+  padding: 4%;
 }

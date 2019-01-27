@@ -45,5 +45,8 @@ h1 {
     .Header a:nth-child(4){ 
         display: none;
     }
+    .Photos {
+        grid-column-start: 5 !important;
+    }
 }
 
