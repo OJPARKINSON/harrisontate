@@ -1,10 +1,10 @@
 import React from 'react'
 import Header2 from '../components/header2'
-import '../components/layout.css'
 import SEO from '../components/seo'
+import Layout from '../components/layout';
 
 const SecondPage = () => (
-<div className="container3">
+<Layout>
     <SEO title="Photos"/>
     <Header2 title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="/Photos" secondLink="" thirdLink="/flare"/>
     <div id="img-container" className="row">
@@ -38,7 +38,7 @@ const SecondPage = () => (
             <img src={require('../images/green/green-JH.jpg')}   alt="a teenager walking down a street"/>
         </div>
     </div>
-</div>  
+</Layout>
 )
 
 

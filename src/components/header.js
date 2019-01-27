@@ -1,6 +1,5 @@
 import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
-import './Header.css'
 import React from 'react'
 
 //https://css-tricks.com/snippets/css/complete-guide-grid/
@@ -28,13 +27,14 @@ class Header extends React.Component {
   } 
     render() {
     return (
-      <div className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}> 
-        <div className="HeaderGroup">
-          <Link to=""><h1 className="firstPage">Harrison Tate</h1></Link>
-          <Link className="Photos" to="/Photos">Photos</Link>
-          <Link className="Lookbook" to="/flare">Lookbook</Link>
+
+        <div className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}> 
+          <div className="HeaderGroup">
+            <Link to=""><h1 className="firstPage">Harrison Tate</h1></Link>
+            <Link className="Photos" to="/Photos">Photos</Link>
+            <Link className="Lookbook" to="/flare">Lookbook</Link>
+          </div>
         </div>
-      </div>
     )
   }
 }
