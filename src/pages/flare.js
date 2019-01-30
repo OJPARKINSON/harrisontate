@@ -7,8 +7,8 @@ import CardImg from '../components/cardImg'
 const SecondPage = () => (
   <Layout>
     <div className="container flareLayout">
-      <SEO title="Flare"/>
-      <Header2 title="Flare" LinkedOne="Photos" LinkedTwo="Harrison Tate" firstLink="/flare" secondLink="/Photos" thirdLink=""/>
+      <SEO title="Flare" />
+      <Header2 title="Flare" LinkedOne="Photos" LinkedTwo="Harrison Tate" firstLink="/flare" secondLink="/Photos" thirdLink="" />
       <div className="imgContainer">
         <img className="FlareLogo" alt="" src={require("../images/FlareLogoCompressed-min.png")} />
       </div>
