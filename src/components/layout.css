@@ -56,26 +56,21 @@ h2 {
 }
 @media (max-width: 640px) {
   .HeroGroup {
-    padding: 100px 20px;;
-  }
-  .Hero h1 {
-    font-size: 40px;
+    padding: 100px 20px;
   }
   .Hero p {
     font-size: 24px;
   }
-  .header a {
-    font-size: 0.8em !important;
-  }
   .HeaderGroup {
     grid-gap: 1px;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(6, auto) !important;
   }
   h1 {
-    font-size: 25px !important;
+    font-size: 5vw !important;
   }
   a{
     margin: 0 10px;
+    font-size: 4.5vw !important;
   }
   .imageContainer {
     grid-template-columns: repeat(2, auto) !important;
@@ -164,4 +159,11 @@ iframe {
 }
 #img-container div img {
   padding: 4%;
+}
+.igtag {
+  margin: 0 auto;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
 }
