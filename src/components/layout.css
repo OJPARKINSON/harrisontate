@@ -128,8 +128,8 @@ iframe {
   grid-template-rows: auto 100%;
 }
 .leftCard {
-  margin: 5vh 0;
-  width: 90%;
+  margin: 5vh auto;
+  width: 60%;
   float: left;
 }
 .Card p {
