@@ -47,7 +47,6 @@
     background: rgba(8, 9, 11, 0.8);
 
 }
-
 @media (max-width: 640px) {
     .Header {
         padding: 15px 0;
