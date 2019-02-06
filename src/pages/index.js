@@ -2,11 +2,11 @@ import React from 'react'
 import SEO from '../components/seo' 
 import Header from '../components/header'
 import "../components/layout.css"
-import "../components/header.css"
+import "../components/Header.css"
 
 const IndexPage = () => (
  <div className="container">
-  <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+  <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
   <Header />
   <div className="Hero">
   </div>

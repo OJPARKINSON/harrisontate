@@ -1,5 +1,5 @@
 import React from 'react'
-import '../components/Layout.css'
+import '../components/layout.css'
 
 const CardImg = props => (
     <div className="Card">

@@ -62,6 +62,9 @@
         grid-column-start: 5 !important;
         -ms-grid-column-start: 5 !important;
     }
+    .HeroGroup {
+        padding: 100px 20px;
+    }
 }
 
 
