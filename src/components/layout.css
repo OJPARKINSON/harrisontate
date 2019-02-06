@@ -64,6 +64,7 @@ h2 {
   .HeaderGroup {
     grid-gap: 1px;
     grid-template-columns: repeat(6, auto) !important;
+    -ms-grid-template-columns: repeat(6, auto) !important;
   }
   h1 {
     font-size: 5vw !important;
@@ -74,6 +75,7 @@ h2 {
   }
   .imageContainer {
     grid-template-columns: repeat(2, auto) !important;
+    -ms-grid-template-columns: repeat(2, auto) !important;
   }
   .imageContainer img {
     height: 50vw !important;
@@ -93,6 +95,7 @@ h2 {
   display: grid;
   grid-gap: 2vw;
   grid-template-columns: repeat(3, auto);
+  -ms-grid-template-columns: repeat(3, auto);
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   margin: 0 auto 8vh auto;  
   align-items: center;
@@ -123,10 +126,13 @@ iframe {
 }
 .Card {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: 100% auto;
+  -ms-grid-template-columns: 100% auto;
   margin: 0 25vw;
   grid-gap: 20px;
   grid-template-rows: auto 100%;
+  -ms-grid-template-rows: auto 100%;
 }
 .leftCard {
   margin: 5vh auto;

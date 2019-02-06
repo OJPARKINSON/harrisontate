@@ -7,7 +7,9 @@
 .HeaderGroup {
     margin: 0 auto;
     display: grid;
+    display: -ms-grid;
     grid-template-columns: repeat(8, auto);
+    -ms-grid-template-columns: repeat(8, auto);
     align-items: center;
     justify-items: center;
 }
@@ -31,15 +33,17 @@
 }
 .Flare {
     grid-column-start: 8;
+    -ms-grid-column-start: 8;
     width: 125px;
     height: 100px;
 }
 .Photos {
     grid-column-start: 7;
+    -ms-grid-column-start: 7;
 }
 .LookBook {
     grid-column-start: 8;
-
+    -ms-grid-column-start: 8;
 }
 .HeaderScrolled {
     backdrop-filter: blur(20px);
@@ -56,6 +60,7 @@
     }
     .Photos {
         grid-column-start: 5 !important;
+        -ms-grid-column-start: 5 !important;
     }
 }
 
