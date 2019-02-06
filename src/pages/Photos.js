@@ -39,6 +39,13 @@ const SecondPage = () => (
             <img src={require('../images/green/green-JH.jpg')}   alt="a teenager walking down a street"/>
         </div>
     </div>
+    <footer>
+    <h3>
+    © {new Date().getFullYear()}, Built by
+    {` `}
+    <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
+    </h3>
+    </footer>
 </Layout>
 )
 

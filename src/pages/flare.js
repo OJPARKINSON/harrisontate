@@ -20,6 +20,14 @@ const SecondPage = () => (
       <div className="heroTitles">
         <iframe title="lookbook2" allowFullScreen src="https://www.youtube.com/embed/sjHPpqmbYNo" rel="0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
       </div>
+    
+    <footer style={{color: 'white'}}>
+    <h3>
+      © {new Date().getFullYear()}, Built by
+      {` `}
+      <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
+    </h3>
+    </footer>
     </div>
   </Layout>
 )

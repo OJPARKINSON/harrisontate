@@ -55,7 +55,6 @@ h2 {
   }
 }
 @media (max-width: 640px) {
-
   .Hero p {
     font-size: 24px;
   }
@@ -83,6 +82,9 @@ h2 {
   }
   .Card p {
     font-size: 3.5vw !important;
+  }
+  h3 {
+    font-size: 5vw !important;
   }
 }
 .imageContainer {
@@ -177,4 +179,17 @@ iframe {
   grid-row-start: 2;
   grid-row-end: 2;
   max-height: 10vh;
+}
+footer {
+  margin-left: 1vw;
+  height: 10vh;
+}
+h3 {
+  font-size: 2vw;
+  margin: 0;
+}
+footer a{
+  color: inherit !important;  
+  font-size: inherit !important; 
+  margin: 0;
 }
