@@ -2,6 +2,7 @@ import React from 'react'
 import Header2 from '../components/header2'
 import SEO from '../components/seo'
 import Layout from '../components/layout';
+import '../components/layout.css'
 
 const SecondPage = () => (
 <Layout>
