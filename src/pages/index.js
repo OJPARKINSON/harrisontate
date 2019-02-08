@@ -14,15 +14,15 @@ const IndexPage = () => (
       <h2>Pictures</h2>
     </div>
     <div className="imageContainer">
-      <a href="https://www.instagram.com/p/BkMxMMZH1bW/" target="_blank" rel="noopener noreferrer"><img alt="Chimney" src={require('../images/4.jpg')}/></a>
-      <a href="https://www.instagram.com/p/BpEXqeoBfRJ/" target="_blank" rel="noopener noreferrer"><img alt="Person and red pipe" src={require('../images/Dfg.jpg')}/></a>
-      <a href="https://www.instagram.com/p/BkMxOQ5nhG9/" target="_blank" rel="noopener noreferrer"><img alt="Dock through ship window" src={require('../images/90.jpg')}/> </a>
-      <a href="https://www.instagram.com/p/BkMx1iSniv_/" target="_blank" rel="noopener noreferrer"><img alt="Ship corridor" src={require('../images/Blas.jpg')}/> </a>
-      <a href="https://www.instagram.com/p/Bg3SYQIDuQr/" target="_blank" rel="noopener noreferrer"><img alt="Old office block with person stood infront" src={require('../images/BLJ.jpg')}/> </a>
-      <a href="https://www.instagram.com/p/BoJIIT3h-9I/" target="_blank" rel="noopener noreferrer"><img alt="Person at art gallery" src={require('../images/Bluy2.jpg')}/></a>
-      <a href="https://www.instagram.com/p/BkMxNGAH_wc/" target="_blank" rel="noopener noreferrer"><img alt="Old TV" src={require('../images/D.jpg')}/> </a>
-      <a href="https://www.instagram.com/p/BpEXh0LBNDt/" target="_blank" rel="noopener noreferrer"><img alt="Person walking down street" src={require('../images/64tygh.jpg')}/> </a>
-      <a href="https://www.instagram.com/p/BoJIQR-hdet/" target="_blank" rel="noopener noreferrer"><img alt="Far crane though fence" src={require('../images/ktcg.jpg')}/></a>
+      <a href="https://www.instagram.com/p/BkMxMMZH1bW/" target="_blank" rel="noopener noreferrer"><img alt="Chimney" src={require('../images/4.webp')}/></a>
+      <a href="https://www.instagram.com/p/BpEXqeoBfRJ/" target="_blank" rel="noopener noreferrer"><img alt="Person and red pipe" src={require('../images/Dfg.webp')}/></a>
+      <a href="https://www.instagram.com/p/BkMxOQ5nhG9/" target="_blank" rel="noopener noreferrer"><img alt="Dock through ship window" src={require('../images/90.webp')}/> </a>
+      <a href="https://www.instagram.com/p/BkMx1iSniv_/" target="_blank" rel="noopener noreferrer"><img alt="Ship corridor" src={require('../images/Blas.webp')}/> </a>
+      <a href="https://www.instagram.com/p/Bg3SYQIDuQr/" target="_blank" rel="noopener noreferrer"><img alt="Old office block with person stood infront" src={require('../images/BLJ.webp')}/> </a>
+      <a href="https://www.instagram.com/p/BoJIIT3h-9I/" target="_blank" rel="noopener noreferrer"><img alt="Person at art gallery" src={require('../images/Bluy2.webp')}/></a>
+      <a href="https://www.instagram.com/p/BkMxNGAH_wc/" target="_blank" rel="noopener noreferrer"><img alt="Old TV" src={require('../images/D.webp')}/> </a>
+      <a href="https://www.instagram.com/p/BpEXh0LBNDt/" target="_blank" rel="noopener noreferrer"><img alt="Person walking down street" src={require('../images/64tygh.webp')}/> </a>
+      <a href="https://www.instagram.com/p/BoJIQR-hdet/" target="_blank" rel="noopener noreferrer"><img alt="Far crane though fence" src={require('../images/ktcg.webp')}/></a>
     </div>
     <div className="heroTitles">
       <h2>Lookbook</h2>
