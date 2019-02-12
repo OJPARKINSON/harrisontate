@@ -5,6 +5,7 @@
     transition: 0.8s cubic-bezier(0.02, 0.8, 0.2, 1);
 }
 .HeaderGroup {
+    color: white ;
     margin: 0 auto;
     display: grid;
     display: -ms-grid;
@@ -21,12 +22,12 @@
 }
 .HeaderGroup h1 {
     margin: 1.5vh 0;
-    color: white;
+    color: inherit;
     font-size: 2.5vw;
     
     }
 .Header a, .link {
-    color: white;
+    color: inherit;
     font-size: 2vw;
     font-weight: 700;
     filter: none;
@@ -48,7 +49,8 @@
 .HeaderScrolled {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    background: rgba(8, 9, 11, 0.8);
+    background: rgba(8, 9, 11, 0.8) ;
+    color: white !important;
 
 }
 @media (max-width: 640px) {

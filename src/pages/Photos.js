@@ -1,13 +1,17 @@
 import React from 'react'
-import Header2 from '../components/header2'
 import SEO from '../components/seo'
 import Layout from '../components/layout';
 import '../components/layout.css'
+import "../components/Header.css"
+import Header from '../components/header';
 
 const SecondPage = () => (
 <Layout>
     <SEO title="Photos"/>
-    <Header2 title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="/Photos" secondLink="" thirdLink="/flare"/>
+    <Header styling="HeaderGroup" title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="/Photos" secondLink="" thirdLink="/flare"/>
+    <div className="altPhotos">
+
+    </div>
     <div id="img-container" className="row">
         <div className="column">
             <img src={require('../images/red/crane-r9-min.jpg')}  alt="buidling under construction in distance"/>
@@ -40,11 +44,11 @@ const SecondPage = () => (
         </div>
     </div>
     <footer>
-    <h3>
-    © {new Date().getFullYear()}, Built by
-    {` `}
-    <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
-    </h3>
+        <h3>
+        © {new Date().getFullYear()}, Built by
+        {` `}
+        <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
+        </h3>
     </footer>
 </Layout>
 )

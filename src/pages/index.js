@@ -7,14 +7,19 @@ import "../components/Header.css"
 const IndexPage = () => (
  <div className="container">
   <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
-  <Header />
+  <Header styling="HeaderGroup" title="Harrison Tate" LinkedOne="Photos" LinkedTwo="Lookbook" firstLink="" secondLink="/Photos" thirdLink="/flare" />
   <div className="Hero">
+  <div className="scroll-downs">
+      <div className="mousey">
+        <div className="scroller"></div>
+      </div>
+    </div>
   </div>
     <div className="heroTitles">
       <h2>Pictures</h2>
     </div>
     <div className="imageContainer">
-      <a href="https://www.instagram.com/p/BkMxMMZH1bW/" target="_blank" rel="noopener noreferrer"><img alt="Chimney" src={require('../images/4.jpg')} onError={"require('../images/4.jpg')"} /></a>
+      <a href="https://www.instagram.com/p/BkMxMMZH1bW/" target="_blank" rel="noopener noreferrer"><img alt="Chimney" src={require('../images/4.jpg')} /></a>
       <a href="https://www.instagram.com/p/BpEXqeoBfRJ/" target="_blank" rel="noopener noreferrer"><img alt="Person and red pipe" src={require('../images/Dfg.jpg')}/></a>
       <a href="https://www.instagram.com/p/BkMxOQ5nhG9/" target="_blank" rel="noopener noreferrer"><img alt="Dock through ship window" src={require('../images/90.jpg')}/> </a>
       <a href="https://www.instagram.com/p/BkMx1iSniv_/" target="_blank" rel="noopener noreferrer"><img alt="Ship corridor" src={require('../images/Blas.jpg')}/> </a>

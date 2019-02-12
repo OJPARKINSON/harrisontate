@@ -1,14 +1,15 @@
 import React from 'react'
-import Header2 from '../components/header2'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import CardImg from '../components/cardImg'
+import Header from '../components/header'
+import "../components/Header.css"
 
 const SecondPage = () => (
   <Layout>
     <div className="container flareLayout">
       <SEO title="Flare" />
-      <Header2 title="Flare" LinkedOne="Photos" LinkedTwo="Harrison Tate" firstLink="/flare" secondLink="/Photos" thirdLink="" />
+      <Header styling="HeaderGroup" title="Flare" LinkedOne="Photos" LinkedTwo="Harrison Tate" firstLink="/flare" secondLink="/Photos" thirdLink="" />
       <div className="imgContainer">
         <img className="FlareLogo" alt="" src={require("../images/FlareLogoCompressed-min.png")} />
       </div>

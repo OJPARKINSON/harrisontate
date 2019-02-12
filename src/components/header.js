@@ -29,12 +29,12 @@ class Header extends React.Component {
     return (
 
         <div className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}> 
-          <div className="HeaderGroup">
-            <Link to=""><h1 className="firstPage">Harrison Tate</h1></Link>
-            <Link className="Photos" to="/Photos">Photos</Link>
-            <Link className="Lookbook" to="/flare">Lookbook</Link>
-          </div>
+          <div className={this.props.styling}>
+          <Link to={this.props.firstLink}><h1>{this.props.title}</h1></Link>
+          <Link className="Photos" to={this.props.secondLink}>{this.props.LinkedOne}</Link>
+          <Link className="Lookbook" to={this.props.thirdLink}>{this.props.LinkedTwo}</Link>
         </div>
+    </div>
     )
   }
 }
