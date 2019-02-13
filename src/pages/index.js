@@ -5,7 +5,6 @@ import "../components/layout.css"
 import "../components/Header.css"
 import ResponsivePlayer from '../components/ResponsivePlayer';
 
-
 const IndexPage = () => (
  <div className="container">
   <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
@@ -33,8 +32,8 @@ const IndexPage = () => (
     </div>
     <div className="heroTitles">
       <h2>Lookbook</h2>
-      <Responsiveplayer />
-    </div>
+      <ResponsivePlayer />
+    </div> 
     <footer>
     <h3>
       © {new Date().getFullYear()}, Built by
@@ -47,3 +46,4 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
