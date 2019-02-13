@@ -107,10 +107,10 @@ h2 {
   height: 45vw;
   width: 100%;
 }
-.player-wrapper {
+iframe {
   width: 77%;
   height: 75vh;
-  margin: 0 auto 8vh auto;
+  margin-bottom: 8vh;
 }
 .container {
   margin: 0 auto;

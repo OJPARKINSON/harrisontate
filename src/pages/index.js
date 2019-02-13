@@ -3,7 +3,6 @@ import SEO from '../components/seo'
 import Header from '../components/header'
 import "../components/layout.css"
 import "../components/Header.css"
-import ResponsivePlayer from '../components/ResponsivePlayer';
 
 
 const IndexPage = () => (
@@ -33,8 +32,13 @@ const IndexPage = () => (
     </div>
     <div className="heroTitles">
       <h2>Lookbook</h2>
+<<<<<<< HEAD
       <ResponsivePlayer />
 
+=======
+      <iframe title="lookbook" allowFullScreen src="https://www.youtube.com/embed/sjHPpqmbYNo" rel="0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+    </div>
+>>>>>>> parent of 68f867f... vid added insted of youtube
     <footer>
     <h3>
       © {new Date().getFullYear()}, Built by
