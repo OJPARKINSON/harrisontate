@@ -6,6 +6,12 @@ import "../components/Header.css"
 <<<<<<< HEAD
 import ResponsivePlayer from '../components/ResponsivePlayer';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import Responsiveplayer from '../components/ResponsivePlayer'
+>>>>>>> 13c704ceeffcb583d2eab7d8d8ae90a1e66aac65
+>>>>>>> parent of 381e5c1... fixed
 =======
 =======
 import Responsiveplayer from '../components/ResponsivePlayer'
@@ -41,10 +47,13 @@ const IndexPage = () => (
       <h2>Lookbook</h2>
 <<<<<<< HEAD
       <ResponsivePlayer />
+<<<<<<< HEAD
     </div> 
 =======
 <<<<<<< HEAD
       <ResponsivePlayer />
+=======
+>>>>>>> parent of 381e5c1... fixed
 =======
       <Responsiveplayer />
 >>>>>>> 13c704ceeffcb583d2eab7d8d8ae90a1e66aac65
