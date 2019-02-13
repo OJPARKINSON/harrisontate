@@ -3,7 +3,11 @@ import SEO from '../components/seo'
 import Header from '../components/header'
 import "../components/layout.css"
 import "../components/Header.css"
+<<<<<<< HEAD
 import ResponsivePlayer from '../components/ResponsivePlayer';
+=======
+import Responsiveplayer from '../components/ResponsivePlayer'
+>>>>>>> 13c704ceeffcb583d2eab7d8d8ae90a1e66aac65
 
 const IndexPage = () => (
  <div className="container">
@@ -32,7 +36,11 @@ const IndexPage = () => (
     </div>
     <div className="heroTitles">
       <h2>Lookbook</h2>
+<<<<<<< HEAD
       <ResponsivePlayer />
+=======
+      <Responsiveplayer />
+>>>>>>> 13c704ceeffcb583d2eab7d8d8ae90a1e66aac65
     </div>
     <footer>
     <h3>
