@@ -6,6 +6,7 @@ import "../components/Header.css"
 import ReponsivePlayer from '../components/ResponsivePlayer'
 import ResponsivePlayer from '../components/ResponsivePlayer';
 
+
 const IndexPage = () => (
  <div className="container">
   <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
@@ -47,3 +48,4 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
