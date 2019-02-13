@@ -4,7 +4,11 @@ import SEO from '../components/seo'
 import CardImg from '../components/cardImg'
 import Header from '../components/header'
 import "../components/Header.css"
+<<<<<<< HEAD
 import ResponsivePlayer from '../components/ResponsivePlayer'
+=======
+import Responsiveplayer from '../components/ResponsivePlayer'
+>>>>>>> 13c704ceeffcb583d2eab7d8d8ae90a1e66aac65
 
 const SecondPage = () => (
   <Layout>
@@ -20,7 +24,11 @@ const SecondPage = () => (
       <CardImg image={require('../images/giffy3.gif')} credits="https://www.instagram.com/abibeckram/" igtag="@abibeckram" alternative=""></CardImg>
       <CardImg image={require('../images/giffy1.gif')} credits="https://www.instagram.com/abibeckram/" igtag="@abibeckram" alternative=""></CardImg>
       <div className="heroTitles">
+<<<<<<< HEAD
        <ResponsivePlayer />
+=======
+       <Responsiveplayer />
+>>>>>>> 13c704ceeffcb583d2eab7d8d8ae90a1e66aac65
       </div>
     
     <footer style={{color: 'white'}}>
