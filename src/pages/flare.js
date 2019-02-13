@@ -4,11 +4,8 @@ import SEO from '../components/seo'
 import CardImg from '../components/cardImg'
 import Header from '../components/header'
 import "../components/Header.css"
-<<<<<<< HEAD
 import ResponsivePlayer from '../components/ResponsivePlayer'
 
-=======
->>>>>>> parent of 68f867f... vid added insted of youtube
 
 const SecondPage = () => (
   <Layout>
@@ -24,11 +21,7 @@ const SecondPage = () => (
       <CardImg image={require('../images/giffy3.gif')} credits="https://www.instagram.com/abibeckram/" igtag="@abibeckram" alternative=""></CardImg>
       <CardImg image={require('../images/giffy1.gif')} credits="https://www.instagram.com/abibeckram/" igtag="@abibeckram" alternative=""></CardImg>
       <div className="heroTitles">
-<<<<<<< HEAD
-       <ResponsivePlayer />
-=======
-        <iframe title="lookbook2" allowFullScreen src="https://www.youtube.com/embed/sjHPpqmbYNo" rel="0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
->>>>>>> parent of 68f867f... vid added insted of youtube
+       <ResponsivePlayer />of 68f867f... vid added insted of youtube
       </div>
     
     <footer style={{color: 'white'}}>
