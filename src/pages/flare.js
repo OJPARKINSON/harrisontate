@@ -4,7 +4,7 @@ import SEO from '../components/seo'
 import CardImg from '../components/cardImg'
 import Header from '../components/header'
 import "../components/Header.css"
-import ResponsivePlayer from '../components/ResponsivePlayer';
+import ResponsivePlayer from '../components/ResponsivePlayer'
 
 const SecondPage = () => (
   <Layout>
