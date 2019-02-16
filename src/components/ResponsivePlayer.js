@@ -12,6 +12,7 @@ class ResponsivePlayer extends React.Component {
             playing='true'
             muted
             controls={true}
+            autoplay
             url={require('../images/Flare2.mp4')}
             width='100%'
             height='100%'
