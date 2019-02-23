@@ -4,6 +4,7 @@ import Header from '../components/header'
 import "../components/layout.css"
 import "../components/Header.css"
 import ResponsivePlayer from '../components/ResponsivePlayer'
+import LinkedImgs from '../components/linkedImg.js';
 
 const IndexPage = () => (
  <div className="container">
@@ -20,15 +21,15 @@ const IndexPage = () => (
       <h2>Pictures</h2>
     </div>
     <div className="imageContainer">
-      <a href="https://www.instagram.com/p/BkMxMMZH1bW/" target="_blank" rel="noopener noreferrer"><img alt="Chimney" src={require('../images/4.jpg')} /></a>
-      <a href="https://www.instagram.com/p/BpEXqeoBfRJ/" target="_blank" rel="noopener noreferrer"><img alt="Person and red pipe" src={require('../images/Dfg.jpg')}/></a>
-      <a href="https://www.instagram.com/p/BkMxOQ5nhG9/" target="_blank" rel="noopener noreferrer"><img alt="Dock through ship window" src={require('../images/90.jpg')}/> </a>
-      <a href="https://www.instagram.com/p/BkMx1iSniv_/" target="_blank" rel="noopener noreferrer"><img alt="Ship corridor" src={require('../images/Blas.jpg')}/> </a>
-      <a href="https://www.instagram.com/p/Bg3SYQIDuQr/" target="_blank" rel="noopener noreferrer"><img alt="Old office block with person stood infront" src={require('../images/BLJ.jpg')}/> </a>
-      <a href="https://www.instagram.com/p/BoJIIT3h-9I/" target="_blank" rel="noopener noreferrer"><img alt="Person at art gallery" src={require('../images/Bluy2.jpg')}/></a>
-      <a href="https://www.instagram.com/p/BkMxNGAH_wc/" target="_blank" rel="noopener noreferrer"><img alt="Old TV" src={require('../images/D.jpg')}/> </a>
-      <a href="https://www.instagram.com/p/BpEXh0LBNDt/" target="_blank" rel="noopener noreferrer"><img alt="Person walking down street" src={require('../images/64tygh.jpg')}/> </a>
-      <a href="https://www.instagram.com/p/BoJIQR-hdet/" target="_blank" rel="noopener noreferrer"><img alt="Far crane though fence" src={require('../images/ktcg.jpg')}/></a>
+      <LinkedImgs siteLink="https://www.instagram.com/p/BkMxMMZH1bW/" alt="Chimney" link={require('../images/4.jpg')} />
+      <LinkedImgs siteLink="https://www.instagram.com/p/BpEXqeoBfRJ/" alt="Person and red pipe" link={require('../images/Dfg.jpg')} />
+      <LinkedImgs siteLink="https://www.instagram.com/p/BkMxOQ5nhG9/" alt="Dock through ship window" link={require('../images/90.jpg')} />
+      <LinkedImgs siteLink="https://www.instagram.com/p/BkMx1iSniv_/" alt="Ship corridor" link={require('../images/Blas.jpg')} />
+      <LinkedImgs siteLink="https://www.instagram.com/p/Bg3SYQIDuQr/" alt="Old office block with person stood infront" link={require('../images/4.jpg')} />
+      <LinkedImgs siteLink="https://www.instagram.com/p/BoJIIT3h-9I/" alt="Person at art gallery" link={require('../images/Bluy2.jpg')} />  
+      <LinkedImgs siteLink="https://www.instagram.com/p/BkMxNGAH_wc/" alt="Old TV" link={require('../images/D.jpg')} /> 
+      <LinkedImgs siteLink="https://www.instagram.com/p/BpEXh0LBNDt/" alt="Person walking down street" link={require('../images/64tygh.jpg')} />
+      <LinkedImgs siteLink="https://www.instagram.com/p/BoJIQR-hdet/" alt="Far crane though fence" link={require('../images/ktcg.jpg')} />
     </div>
     <div className="heroTitles">
       <h2>Lookbook</h2>
