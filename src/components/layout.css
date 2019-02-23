@@ -75,8 +75,7 @@ h2 {
     -ms-grid-template-columns: repeat(2, auto) !important;
   }
   .imageContainer img {
-
-    height: 50vw !important;
+    height: 60vw !important;
   }
   .leftCard {
     width: 100% !important;
@@ -86,6 +85,12 @@ h2 {
   }
   h3 {
     font-size: 5vw !important;
+  }
+  .scroll-downs {
+    display: none;
+  }
+  #lastImg {
+    display: none;
   }
 }
 .imageContainer {
@@ -101,7 +106,6 @@ h2 {
   margin: 0 auto 8vh auto;  
   align-items: center;
   justify-items: center;
-
 }
 .imageContainer img {
   height: 45vw;
@@ -109,7 +113,7 @@ h2 {
 }
 .player-wrapper {
   width: 77%;
-  height: 75vh;
+  height: auto;
   margin: 0 auto 8vh auto;
 }
 .container {
@@ -235,3 +239,4 @@ footer a{
 #harrisonVid {
   margin-top: 5vh;
 }
+
