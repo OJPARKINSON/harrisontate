@@ -8,14 +8,15 @@ class ResponsivePlayer extends React.Component {
         <div className='player-wrapper'>
             <ReactPlayer
             className='react-player'
-            preload='true'
-            playing='true'
+            preload="true"
+            playing={true}
             muted
             controls={true}
-            autoplay
+            autoPlay={true}
             url={require('../images/Flare2.mp4')}
             width='100%'
             height='100%'
+            loop
             />
         </div>
         )

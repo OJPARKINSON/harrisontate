@@ -16,10 +16,10 @@ const SecondPage = () => (
       </div>
       <CardVid vid={require('../images/AIDAN2.mp4')} credits="https://www.instagram.com/aida.n_/" igtag="@aida.n_" alternative=""></CardVid>
       <CardVid vid={require('../images/ME.mp4')} credits="https://www.instagram.com/abibeckram/" igtag="@abibeckram" alternative=""></CardVid>
-      <CardVid vid={require('../images/moshed.mp4')} credits="https://www.instagram.com/abibeckramdesignz/" igtag="@abibeckram" alternative=""></CardVid>
+      <CardVid vid={require('../images/moshed.mp4')} credits="https://www.instagram.com/abibeckramdesigns/" igtag="@abibeckramdesigns" alternative=""></CardVid>
       <CardVid vid={require('../images/giffy3.mp4')} credits="https://www.instagram.com/abibeckram/" igtag="@abibeckram" alternative=""></CardVid>
       <CardVid vid={require('../images/giffy1.mp4')} credits="https://www.instagram.com/abibeckram/" igtag="@abibeckram" alternative=""></CardVid>
-      <div className="heroTitles">
+      <div className="heroTitles" id="harrisonVid">
         <ResponsivePlayer />
       </div>
     <footer style={{color: 'white'}}>
