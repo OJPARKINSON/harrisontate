@@ -92,7 +92,9 @@ h2 {
   #lastImg {
     display: none;
   }
-}
+  .player-wrapper {
+    width: 90% !important;
+  }
 .imageContainer {
   width: 95%;
   position: relative;
