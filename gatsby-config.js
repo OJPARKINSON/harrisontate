@@ -1,5 +1,3 @@
-const ID = process.env.ID;
-const Token = process.env.Token;
 module.exports = {
   siteMetadata: {
     title: `Harrison Tate`,
