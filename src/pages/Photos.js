@@ -32,7 +32,7 @@ const SecondPage = ({ data }) => (
 export default SecondPage
 export const query = graphql`
 query siteMetaTitleQuery {
-    allContentfulImages(sort: { fields: [createdAt], order: ASC }){
+    allContentfulImages(limit: 23, sort: { fields: [createdAt], order: ASC }){
         edges {
             node {
                 title
