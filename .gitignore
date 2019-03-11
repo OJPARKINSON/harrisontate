@@ -6,4 +6,3 @@ node_modules
 .DS_Store
 config.env
 apiKeys.*
-deploy-github.js
