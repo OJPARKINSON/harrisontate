@@ -9,7 +9,7 @@ import { graphql } from 'gatsby'
 const SecondPage = ({ data }) => (
 <Layout>
     <SEO title="Photos"/>
-    <Header styling="HeaderGroup" title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="/Photos" secondLink="" thirdLink="/flare"/>
+    <Header styling="HeaderGroup" title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="https://stupefied-kare-0a9c21.netlify.com/Photos" secondLink="https://stupefied-kare-0a9c21.netlify.com" thirdLink="https://stupefied-kare-0a9c21.netlify.com/flare"/>
     <div className="altPhotos">
 
     </div>

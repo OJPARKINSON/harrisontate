@@ -9,7 +9,7 @@ import LinkedImgs from '../components/linkedImg.js';
 const IndexPage = () => (
  <div className="container">
   <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
-  <Header styling="HeaderGroup" title="Harrison Tate" LinkedOne="Photos" LinkedTwo="Lookbook" firstLink="" secondLink="/Photos" thirdLink="/flare" />
+  <Header styling="HeaderGroup" title="Harrison Tate" LinkedOne="Photos" LinkedTwo="Lookbook" firstLink="https://stupefied-kare-0a9c21.netlify.com" secondLink="https://stupefied-kare-0a9c21.netlify.com/Photos" thirdLink="https://stupefied-kare-0a9c21.netlify.com/flare" />
   <div rel="preLoad" className="Hero">
   <div className="scroll-downs">
       <div className="mousey">
