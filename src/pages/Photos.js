@@ -9,7 +9,7 @@ import { graphql } from 'gatsby'
 const SecondPage = ({ data }) => (
 <Layout>
     <SEO title="Photos"/>
-    <Header styling="HeaderGroup" title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="https://stupefied-kare-0a9c21.netlify.com/Photos" secondLink="https://stupefied-kare-0a9c21.netlify.com" thirdLink="https://stupefied-kare-0a9c21.netlify.com/flare"/>
+    <Header styling="HeaderGroup" title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="/Photos" secondLink="" thirdLink="/flare"/>
     <div className="altPhotos">
 
     </div>
@@ -32,7 +32,7 @@ const SecondPage = ({ data }) => (
 export default SecondPage
 export const query = graphql`
 query siteMetaTitleQuery {
-    allContentfulImages{
+    allContentfulImages(limit: 24){
         edges {
             node {
                 title

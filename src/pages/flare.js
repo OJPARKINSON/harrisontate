@@ -10,7 +10,7 @@ const SecondPage = () => (
   <Layout>
     <div className="container flareLayout">
       <SEO title="Flare" />
-      <Header styling="HeaderGroup" title="Flare" LinkedOne="Photos" LinkedTwo="Harrison Tate" firstLink="https://stupefied-kare-0a9c21.netlify.com/flare" secondLink="https://stupefied-kare-0a9c21.netlify.com/Photos" thirdLink="https://stupefied-kare-0a9c21.netlify.com" />
+      <Header styling="HeaderGroup" title="Flare" LinkedOne="Photos" LinkedTwo="Harrison Tate" firstLink="/flare" secondLink="/Photos" thirdLink="" />
       <div className="imgContainer">
         <img className="FlareLogo" alt="" src={require("../images/FlareLogoCompressed-min.png")} />
       </div>

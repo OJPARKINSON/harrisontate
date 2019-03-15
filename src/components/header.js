@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Link } from "gatsby"
 
 //https://css-tricks.com/snippets/css/complete-guide-grid/
 
@@ -29,9 +30,9 @@ class Header extends React.Component {
 
         <div className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}> 
           <div className={this.props.styling}>
-          <a href={this.props.firstLink}><h1>{this.props.title}</h1></a>
-          <a className="Photos" href={this.props.secondLink}>{this.props.LinkedOne}</a>
-          <a className="Lookbook" href={this.props.thirdLink}>{this.props.LinkedTwo}</a>
+          <Link to={this.props.firstLink}><h1>{this.props.title}</h1></Link>
+          <Link className="Photos" to={this.props.secondLink}>{this.props.LinkedOne}</Link>
+          <Link className="Lookbook" to={this.props.thirdLink}>{this.props.LinkedTwo}</Link>
         </div>
     </div>
     )
