@@ -14,6 +14,5 @@ module.exports = {
         accessToken: '740515ae0c26c730969e370d32096f0479915f781291abdf8b4e6ca494c635b1'
       }
     }
-  ],
-  pathPrefix: "/harrisontate2",
+  ]
 }
