@@ -13,6 +13,7 @@ class ResponsivePlayer extends React.Component {
             muted
             controls={true}
             autoPlay={true}
+            url={require('../images/Bluy2ç.jpg')}
             url={require('../images/Flare2.mp4')}
             width='100%'
             height='100%'
