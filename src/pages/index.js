@@ -5,8 +5,9 @@ import "../components/layout.css"
 import "../components/Header.css"
 import ResponsivePlayer from '../components/ResponsivePlayer'
 import LinkedImgs from '../components/linkedImg.js';
+import { graphql } from 'gatsby'
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
  <div className="container">
   <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
   <Header styling="HeaderGroup" title="Harrison Tate" LinkedOne="Photos" LinkedTwo="Lookbook" firstLink="/" secondLink="/Photos" thirdLink="/flare" />
@@ -33,7 +34,9 @@ const IndexPage = () => (
     </div>
     <div className="heroTitles">
       <h2>Lookbook</h2>
-      <ResponsivePlayer />
+      {data.allContentfulVideo.edges.map(edge => (
+          <ResponsivePlayer key={edge.node.title} url={"https:" + edge.node.video.file.url} />
+      ))}
     </div>
     <footer>
     <h3>
@@ -47,4 +50,19 @@ const IndexPage = () => (
 )
 
 export default IndexPage
-
+export const query = graphql`
+query videos {
+allContentfulVideo {
+  edges {
+      node {
+      title
+      video {
+          file {
+          url
+          }
+      }
+      }
+  }
+  }
+}
+`

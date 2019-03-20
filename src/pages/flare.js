@@ -5,8 +5,9 @@ import CardVid from '../components/cardVid'
 import Header from '../components/header'
 import "../components/Header.css"
 import ResponsivePlayer from '../components/ResponsivePlayer'
+import { graphql } from 'gatsby'
 
-const SecondPage = () => (
+const SecondPage = ({data}) => (
   <Layout>
     <div className="container flareLayout">
       <SEO title="Flare" />
@@ -14,13 +15,13 @@ const SecondPage = () => (
       <div className="imgContainer">
         <img className="FlareLogo" alt="" src={require("../images/FlareLogoCompressed-min.png")} />
       </div>
-      <CardVid vid={require('../images/AIDAN2.mp4')} credits="https://www.instagram.com/aida.n_/" igtag="@aida.n_" alternative=""></CardVid>
-      <CardVid vid={require('../images/ME.mp4')} credits="https://www.instagram.com/abibeckram/" igtag="@abibeckram" alternative=""></CardVid>
-      <CardVid vid={require('../images/moshed.mp4')} credits="https://www.instagram.com/abibeckramdesigns/" igtag="@abibeckramdesigns" alternative=""></CardVid>
-      <CardVid vid={require('../images/giffy3.mp4')} credits="https://www.instagram.com/abibeckram/" igtag="@abibeckram" alternative=""></CardVid>
-      <CardVid vid={require('../images/giffy1.mp4')} credits="https://www.instagram.com/abibeckram/" igtag="@abibeckram" alternative=""></CardVid>
+      {data.allContentfulGif.edges.map(edge => (
+        <CardVid key={edge.node.id} credits={"https://www.instagram.com/" + edge.node.tag} igtag={"@" + edge.node.tag} vid={"https:" + edge.node.img.file.url} />
+      ))}
       <div className="heroTitles" id="harrisonVid">
-        <ResponsivePlayer />
+        {data.allContentfulVideo.edges.map(edge => (
+           <ResponsivePlayer key={edge.node.title} url={"https:" + edge.node.video.file.url} />
+          ))}
       </div>
     <footer style={{color: 'white'}}>
     <h3>
@@ -33,5 +34,34 @@ const SecondPage = () => (
   </Layout>
 )
 
-
 export default SecondPage
+export const query = graphql`
+query video {
+allContentfulVideo {
+  edges {
+      node {
+      id
+      title
+      video {
+          file {
+          url
+          }
+      }
+      }
+  }
+  }
+  allContentfulGif(sort: { fields: [createdAt], order: ASC }) {
+    edges {
+        node {
+        id
+        tag
+        img {
+          file {
+            url
+          }
+        }
+        }
+    }
+    }
+}
+`

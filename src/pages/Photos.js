@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import '../components/layout.css'
 import "../components/Header.css"
 import Header from '../components/header';
-import { graphql } from 'gatsby'
+
 
 const SecondPage = ({ data }) => (
 <Layout>
@@ -31,7 +31,7 @@ const SecondPage = ({ data }) => (
 )
 export default SecondPage
 export const query = graphql`
-query siteMetaTitleQuery {
+query images {
     allContentfulImages(limit: 24){
         edges {
             node {
