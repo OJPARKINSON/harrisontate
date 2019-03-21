@@ -64,6 +64,11 @@ h2 {
     grid-template-columns: repeat(6, auto) !important;
     -ms-grid-template-columns: repeat(6, auto) !important;
   }
+  .column {
+    column-count: 2 !important;
+    column-fill: balance;
+    transition: 0.7s;
+  }
   h1 {
     font-size: 5vw !important;
   }
