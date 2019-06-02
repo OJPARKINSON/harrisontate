@@ -20,7 +20,7 @@ const SecondPage = ({data}) => (
       ))}
       <div className="heroTitles" id="harrisonVid">
         {data.allContentfulVideo.edges.map(edge => (
-           <ResponsivePlayer key={edge.node.title} url={"https:" + edge.node.video.file.url} />
+           <ResponsivePlayer playsinline key={edge.node.title} url={"https:" + edge.node.video.file.url} />
           ))}
       </div>
     <footer style={{color: 'white'}}>

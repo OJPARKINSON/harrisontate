@@ -3,7 +3,7 @@ import SEO from '../components/seo'
 import Header from '../components/header'
 import "../components/layout.css"
 import "../components/Header.css"
-import ResponsivePlayer from '../components/ResponsivePlayer'
+import ReactPlayer from 'react-player'
 import LinkedImgs from '../components/linkedImg.js';
 import { graphql } from 'gatsby'
 
@@ -35,7 +35,7 @@ const IndexPage = ({data}) => (
     <div className="heroTitles">
       <h2>Lookbook</h2>
       {data.allContentfulVideo.edges.map(edge => (
-          <ResponsivePlayer key={edge.node.title} url={"https:" + edge.node.video.file.url} />
+          <ReactPlayer key={edge.node.title} url={"https:" + edge.node.video.file.url} />
       ))}
     </div>
     <footer>
