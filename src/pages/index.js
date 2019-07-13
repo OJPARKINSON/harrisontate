@@ -11,12 +11,13 @@ const IndexPage = ({data}) => (
  <div className="container">
   <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
   <Header styling="HeaderGroup" title="Harrison Tate" LinkedOne="Photos" LinkedTwo="Lookbook" firstLink="/" secondLink="/Photos" thirdLink="/flare" />
-  <div rel="preLoad" className="Hero">
+  <div>
+  <img alt="Harrison Tate Photographer Hero image" className="Hero-Image" src={require('../images/harrisonlanding.jpg')} />
   <div className="scroll-downs">
-      <div className="mousey">
-        <div className="scroller"></div>
-      </div>
+    <div className="mousey">
+      <div className="scroller"></div>
     </div>
+  </div>
   </div>
     <div className="heroTitles">
       <h2>Pictures</h2>
