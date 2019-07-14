@@ -10,9 +10,6 @@ const SecondPage = ({ data }) => (
 <Layout>
     <SEO title="Photos"/>
     <Header styling="HeaderGroup" title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="/Photos" secondLink="" thirdLink="/flare"/>
-    <div className="altPhotos">
-
-    </div>
     <div id="img-container" className="row">
         <div className="column">
             {data.allContentfulImages.edges.map(edge => (

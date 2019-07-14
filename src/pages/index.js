@@ -9,15 +9,11 @@ import { graphql } from 'gatsby'
 
 const IndexPage = ({data}) => (
  <div className="container">
-  <img alt="Harrison Tate" preload={true} className="loader" src={require('../images/harrisonlanding.jpg')} />
+  <img alt="Harrison Tate" preload={true} className="loader" src={require('../images/harrisonlanding.jpg')} /> //fast load
   <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
   <Header styling="HeaderGroup" title="Harrison Tate" LinkedOne="Photos" LinkedTwo="Lookbook" firstLink="/" secondLink="/Photos" thirdLink="/flare" />
   <div className="Hero-Image">
-  <div className="scroll-downs">
-    <div className="mousey">
-      <div className="scroller"></div>
-    </div>
-  </div>
+    <div className="scroll-downs"><div className="mousey"><div className="scroller"></div></div></div> //mouse
   </div>
     <div className="heroTitles">
       <h2>Pictures</h2>
