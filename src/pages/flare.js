@@ -6,14 +6,14 @@ import Header from '../components/header'
 import "../components/Header.css"
 import ResponsivePlayer from '../components/ResponsivePlayer'
 import { graphql } from 'gatsby'
-
+//src="../images/FlareLogoCompressed-min.png"
 const SecondPage = ({data}) => (
   <Layout>
     <div className="container flareLayout">
       <SEO title="Flare" />
       <Header styling="HeaderGroup" title="Flare" LinkedOne="Photos" LinkedTwo="Harrison Tate" firstLink="/flare" secondLink="/Photos" thirdLink="" />
       <div className="imgContainer">
-        <img className="FlareLogo" alt="" src={require("../images/FlareLogoCompressed-min.png")} />
+        <img className="FlareLogo" alt=""  />
       </div>
       {data.allContentfulGif.edges.map(edge => (
         <CardVid key={edge.node.id} credits={"https://www.instagram.com/" + edge.node.tag} igtag={"@" + edge.node.tag} vid={"https:" + edge.node.img.file.url} />
