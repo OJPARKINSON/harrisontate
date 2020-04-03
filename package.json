@@ -13,6 +13,7 @@
     "gatsby-plugin-netlify-cms": "^3.0.18",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.2",
+    "gatsby-plugin-s3": "^0.3.3",
     "gatsby-plugin-sharp": "^2.2.9",
     "gatsby-source-contentful": "^2.2.6",
     "gatsby-source-filesystem": "^2.2.2",
@@ -41,8 +42,7 @@
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "deploy": "gatsby-plugin-s3 deploy"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
@@ -54,6 +54,5 @@
   },
   "bugs": {
     "url": "https://github.com/OJPARKINSON/harrisontate2/issues"
-  },
-  "snyk": true
+  }
 }
