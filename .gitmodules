@@ -1,2 +1,2 @@
-[submodule "DbConnector"]
-	branch = stable
+[submodule "harrisontate2"]
+	url = https://github.com/OJPARKINSON/harrisontate2/
