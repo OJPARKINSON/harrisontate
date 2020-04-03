@@ -5,6 +5,9 @@ module.exports = {
     author: `@OliverParkinson`,
   },
   plugins: [
+    {
+      resolve: `gatsby-transformer-sharp`
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-contentful',
