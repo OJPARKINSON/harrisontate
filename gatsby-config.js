@@ -1,4 +1,8 @@
 require('dotenv').config()
+
+var accessToken = process.env.CONTENTAC
+var host = process.env.CONTENTURL
+
 module.exports = {
   siteMetadata: {
     title: `Harrison Tate`,
@@ -14,7 +18,8 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: 'vmhm8j7yot4g',
-        accessToken: process.env.CONTENTAC
+        accessToken,
+        host
       }
     },
   ]

@@ -8,8 +8,6 @@ import LinkedImgs from '../components/linkedImg.js';
 import { graphql } from 'gatsby'
 
 const IndexPage = ({data}) => {
-  //src='../images/harrisonlanding.jpg'
-  console.log(data.allContentfulAsset.nodes.filter(node => node.file.contentType === "image/jpeg"))
   return (
   <div className="container">
       {data.allContentfulAsset.nodes.filter(node => node.title === "harrisonlanding").map(node => (
