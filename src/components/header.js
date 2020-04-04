@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Link } from "gatsby"
 
-//https://css-tricks.com/snippets/css/complete-guide-grid/
 
 class Header extends React.Component {
   constructor(props) {

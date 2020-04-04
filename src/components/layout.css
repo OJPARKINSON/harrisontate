@@ -16,17 +16,16 @@ a {
   text-decoration: none;
   filter: none;
 }
-.Hero-Image {
+.loader {
   /* background-image: url('../images/harrisonlanding.jpg'); */
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: center;
   position: relative;
+  z-index: 0;
 }
-.loader {
-  display: none;
-}
+
 .heroTitles {
   margin: 0;
   width: 100% !important;

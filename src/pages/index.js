@@ -9,9 +9,12 @@ import { graphql } from 'gatsby'
 
 const IndexPage = ({data}) => {
   //src='../images/harrisonlanding.jpg'
+  console.log(data.allContentfulAsset.nodes.filter(node => node.file.contentType === "image/jpeg"))
   return (
   <div className="container">
-    <img alt="Harrison Tate" preload="true" className="loader"  /> 
+      {data.allContentfulAsset.nodes.filter(node => node.title === "harrisonlanding").map(node => (
+        <img alt={node.description} preload="true" className="loader" src={"https:" + node.file.url} /> 
+      ))}
     <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
     <Header styling="HeaderGroup" title="Harrison Tate" LinkedOne="Photos" LinkedTwo="Lookbook" firstLink="/" secondLink="/Photos" thirdLink="/flare" />
     <div className="Hero-Image">
@@ -21,13 +24,15 @@ const IndexPage = ({data}) => {
         <h2>Pictures</h2>
       </div>
       <div className="imageContainer">
-        <p>add image shit</p>
+        {data.allContentfulIndex.nodes.map(node => (
+          <LinkedImgs alt={node.alt} id={node.id} siteLink={node.socialLink} link={"https:" + node.image.file.url} /> 
+        ))}
       </div>
       <div className="heroTitles">
         <h2>Lookbook</h2>
         <div className="heroTitles" id="harrisonVid">
-          {data.allContentfulVideo.edges.map(edge => (
-            <ResponsivePlayer playsinline key={edge.node.title} url={"https:" + edge.node.video.file.url} />
+          {data.allContentfulAsset.nodes.filter(node => node.title === "Flare").map(node => (
+            <ResponsivePlayer playsinline key={node.title} url={"https:" + node.file.url} />
             ))}
         </div>
       </div>
@@ -44,18 +49,31 @@ const IndexPage = ({data}) => {
 
 export default IndexPage
 export const query = graphql`
-query videos {
-allContentfulVideo {
-  edges {
-      node {
+{
+  allContentfulAsset {
+    nodes {
       title
-      video {
-          file {
-          url
-          }
+      description
+      file {
+        url
+        contentType
       }
-      }
+      id
+    }
   }
+  allContentfulIndex(sort: {fields: order, order: ASC}) {
+    nodes {
+      title
+      alt
+      socialLink
+      image {
+        file {
+          url
+        }
+      }
+      id
+    }
   }
 }
+
 `
