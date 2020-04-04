@@ -13,16 +13,16 @@ const SecondPage = ({data}) => (
       <SEO title="Flare" />
       <Header styling="HeaderGroup" title="Flare" LinkedOne="Photos" LinkedTwo="Harrison Tate" firstLink="/flare" secondLink="/Photos" thirdLink="" />
       <div className="imgContainer">
-      {data.allContentfulAsset.nodes.filter(node => node.file.contentType === "image/png").map(node => (
-        <img className="FlareLogo" alt={node.id}  src={"https:" + node.file.url}/>
+      {data.allContentfulGif.nodes.filter(node => node.tag === "flare-logo").map(node => (
+        <img className="FlareLogo" alt={node.tag}  src={"https:" + node.img.file.url}/>
       ))}
       </div>
-      {data.allContentfulGif.edges.map(edge => (
-        <CardVid key={edge.node.id} credits={"https://www.instagram.com/" + edge.node.tag} igtag={"@" + edge.node.tag} vid={"https:" + edge.node.img.file.url} />
+      {data.allContentfulGif.nodes.filter(node => node.contentfulid).map(node => (
+        <CardVid key={node.id} credits={"https://www.instagram.com/" + node.tag} igtag={"@" + node.tag} vid={"https:" + node.img.file.url} />
       ))}
       <div className="heroTitles" id="harrisonVid">
-        {data.allContentfulAsset.nodes.filter(node => node.file.contentType === "video/mp4").map(node => (
-           <ResponsivePlayer playsinline key={node.title} url={"https:" + node.file.url} />
+        {data.allContentfulGif.nodes.filter(node => node.tag === "flare-video").map(node => (
+           <ResponsivePlayer playsinline key={node.tag} url={"https:" + node.img.file.url} />
           ))}
       </div>
     <footer style={{color: 'white'}}>
@@ -39,29 +39,21 @@ const SecondPage = ({data}) => (
 export default SecondPage
 export const query = graphql`
 {
-  allContentfulAsset(filter: {title: {regex: "/(?:[Ff]lare)/"}}) {
+  allContentfulGif {
     nodes {
-      title
       id
-      description
-      file {
-        url
-        contentType
+      tag
+      contentfulid
+      img {
+        file {
+          contentType
+          url
+          fileName
+        }
+        title
+        description
       }
     }
   }
-  allContentfulGif(sort: { fields: [createdAt], order: ASC }) {
-    edges {
-        node {
-        id
-        tag
-        img {
-          file {
-            url
-          }
-        }
-        }
-    }
-    }
 }
 `
