@@ -13,7 +13,7 @@ const SecondPage = ({ data }) => {
             <Header styling="PHeaderGroup HeaderGroup" title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="/Photos" secondLink="" thirdLink="/flare"/>
             <div id="img-container" className="row">
                 <div className="column">
-                    {data.allContentfulImages.edges.map(edge => (
+                    {data.allContentfulImages.edges.filter(edge => edge.node.title !== "harrisonlanding").map(edge => (
                         <img src={"https:" + edge.node.image.file.url } key={"i" + edge.node.title} id={"i" + edge.node.title} alt={edge.node.alternative} />
                     ))}
                 </div>
@@ -31,7 +31,7 @@ const SecondPage = ({ data }) => {
 
 export default SecondPage
 export const query = graphql`
-query images {
+{
     allContentfulImages(limit: 24){
         edges {
             node {
