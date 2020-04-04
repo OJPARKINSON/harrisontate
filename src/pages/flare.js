@@ -17,7 +17,7 @@ const SecondPage = ({data}) => (
         <img className="FlareLogo" alt={node.tag}  src={"https:" + node.img.file.url}/>
       ))}
       </div>
-      {data.allContentfulGif.nodes.filter(node => node.contentfulid).map(node => (
+      {data.allContentfulGif.nodes.filter(node => node.contentfulid).reverse().map(node => (
         <CardVid key={node.id} credits={"https://www.instagram.com/" + node.tag} igtag={"@" + node.tag} vid={"https:" + node.img.file.url} />
       ))}
       <div className="heroTitles" id="harrisonVid">
