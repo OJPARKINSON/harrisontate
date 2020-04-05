@@ -6,7 +6,7 @@ import Header from '../components/header'
 import "../components/Header.css"
 import ResponsivePlayer from '../components/ResponsivePlayer'
 import { graphql } from 'gatsby'
-//src="../images/FlareLogoCompressed-min.png"
+
 const SecondPage = ({data}) => (
   <Layout>
     <div className="container flareLayout">
@@ -17,7 +17,7 @@ const SecondPage = ({data}) => (
         <img className="FlareLogo" alt={node.tag}  src={"https:" + node.img.file.url}/>
       ))}
       </div>
-      {data.allContentfulGif.nodes.filter(node => node.contentfulid).map(node => (
+      {data.allContentfulGif.nodes.filter(node => node.contentfulid).reverse().map(node => (
         <CardVid key={node.id} credits={"https://www.instagram.com/" + node.tag} igtag={"@" + node.tag} vid={"https:" + node.img.file.url} />
       ))}
       <div className="heroTitles" id="harrisonVid">

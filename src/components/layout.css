@@ -60,7 +60,7 @@ h2 {
 }
 @media (max-width: 740px) {
   .loader {
-    min-height: 50vh;
+    min-height: 40vh;
   }
   .Hero p {
     font-size: 24px;
