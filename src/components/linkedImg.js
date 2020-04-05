@@ -3,8 +3,8 @@ import '../components/layout.css'
 
 
 
-const LinkedImgs = (props) => (
-    <a href={props.siteLink} target="_blank" rel="noopener noreferrer"><img alt={props.alt} id={props.id} src={props.link} /></a> 
+const LinkedImgs = ({siteLink, alt, id, link}) => (
+    <a href={siteLink} target="_blank" rel="noopener noreferrer"><img alt id src={link} /></a> 
 )
 
 export default LinkedImgs 

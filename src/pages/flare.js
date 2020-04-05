@@ -6,7 +6,7 @@ import Header from '../components/header'
 import "../components/Header.css"
 import ResponsivePlayer from '../components/ResponsivePlayer'
 import { graphql } from 'gatsby'
-//src="../images/FlareLogoCompressed-min.png"
+
 const SecondPage = ({data}) => (
   <Layout>
     <div className="container flareLayout">
