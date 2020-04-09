@@ -1,0 +1,26 @@
+{
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-harrisontate2-master-215044-authRole",
+            "UnauthRoleArn": "arn:aws:iam::729525448462:role/amplify-harrisontate2-master-215044-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::729525448462:role/amplify-harrisontate2-master-215044-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-harrisontate2-master-215044-deployment",
+            "UnauthRoleName": "amplify-harrisontate2-master-215044-unauthRole",
+            "StackName": "amplify-harrisontate2-master-215044",
+            "StackId": "arn:aws:cloudformation:eu-west-1:729525448462:stack/amplify-harrisontate2-master-215044/ac386570-79da-11ea-9544-0af8eed4b1ec",
+            "AmplifyAppId": "dqq50m09888lc"
+        },
+        "categories": {
+            "auth": {
+                "cognito3b58f81b": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "dqq50m09888lc",
+                    "type": "cicd"
+                }
+            }
+        }
+    }
+}

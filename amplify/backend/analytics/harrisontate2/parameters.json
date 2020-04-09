@@ -1,0 +1,21 @@
+{
+    "appName": "harrisontate2",
+    "roleName": "pinpointLambdaRolefdb99be4",
+    "cloudformationPolicyName": "cloudformationPolicyfdb99be4",
+    "cloudWatchPolicyName": "cloudWatchPolicyfdb99be4",
+    "pinpointPolicyName": "pinpointPolicyfdb99be4",
+    "authPolicyName": "pinpoint_amplify_fdb99be4",
+    "unauthPolicyName": "pinpoint_amplify_fdb99be4",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

@@ -7,6 +7,7 @@ import ResponsivePlayer from '../components/ResponsivePlayer'
 import LinkedImgs from '../components/linkedImg.js';
 import { graphql } from 'gatsby'
 
+
 const IndexPage = ({data}) => {
   return (
   <div className="container">
