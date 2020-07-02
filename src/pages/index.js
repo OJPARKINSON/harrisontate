@@ -1,19 +1,18 @@
 import React from 'react'
 import SEO from '../components/seo' 
 import Header from '../components/header'
-import "../components/layout.css"
-import "../components/Header.css"
+import { graphql } from 'gatsby'
+import Img from "gatsby-image"
+
 import ResponsivePlayer from '../components/ResponsivePlayer'
 import LinkedImgs from '../components/linkedImg.js';
-import { graphql } from 'gatsby'
+import "../components/layout.css"
+import "../components/Header.css"
 
-
-const IndexPage = ({data}) => {
+const IndexPage = ({ data }) => {
   return (
   <div className="container">
-      {data.allContentfulAsset.nodes.filter(node => node.title === "harrisonlanding").map(node => (
-        <img alt={node.description} preload="true" className="loader" src={"https:" + node.file.url} /> 
-      ))}
+        <Img alt={data.allContentfulAsset.nodes[0].description} preload="true" className="loader" fluid={data.allContentfulAsset.nodes[0].fluid} /> 
     <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
     <Header styling="HeaderGroup" title="Harrison Tate" LinkedOne="Photos" LinkedTwo="Lookbook" firstLink="/" secondLink="/Photos" thirdLink="/flare" />
     <div className="Hero-Image">
@@ -24,15 +23,13 @@ const IndexPage = ({data}) => {
       </div>
       <div className="imageContainer">
         {data.allContentfulIndex.nodes.map(node => (
-          <LinkedImgs alt={node.alt} id={node.id} siteLink={node.socialLink} link={"https:" + node.image.file.url} /> 
+          <LinkedImgs alt={node.alt} id={node.id} siteLink={node.socialLink} fluid={node.image.fluid} /> 
         ))}
       </div>
       <div className="heroTitles">
         <h2>Lookbook</h2>
         <div className="heroTitles" id="harrisonVid">
-          {data.allContentfulAsset.nodes.filter(node => node.title === "Flare").map(node => (
-            <ResponsivePlayer playsinline key={node.title} url={"https:" + node.file.url} />
-            ))}
+            <ResponsivePlayer playsinline key={data.allContentfulAsset.nodes[1].title} url={"https:" + data.allContentfulAsset.nodes[1].file.url} />
         </div>
       </div>
       <footer>
@@ -48,31 +45,34 @@ const IndexPage = ({data}) => {
 
 export default IndexPage
 export const query = graphql`
-{
-  allContentfulAsset {
-    nodes {
-      title
-      description
-      file {
-        url
-        contentType
-      }
-      id
-    }
-  }
-  allContentfulIndex(sort: {fields: order, order: ASC}) {
-    nodes {
-      title
-      alt
-      socialLink
-      image {
+  {
+    allContentfulAsset(filter: {title: {in: ["harrisonlanding", "Flare"]}}) {
+      nodes {
+        title
+        description
         file {
           url
+          contentType
         }
+        fluid(quality: 100, maxHeight: 2304, maxWidth: 4096) {
+          ...GatsbyContentfulFluid
+        }
+        id
       }
-      id
+    }
+    allContentfulIndex(sort: {fields: order, order: ASC}) {
+      nodes {
+        title
+        alt
+        socialLink
+        image {
+          fluid {
+            ...GatsbyContentfulFluid
+          }
+        }
+        id
+        order
+      }
     }
   }
-}
-
 `
