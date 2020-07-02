@@ -11,7 +11,7 @@ import "../components/Header.css"
 const SecondPage = ({ data }) => (
     <Layout>
         <SEO title="Photos"/>
-        <Header styling="PHeaderGroup HeaderGroup" title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="/Photos" secondLink="" thirdLink="/flare"/>
+        <Header styling="PHeaderGroup HeaderGroup" title="Photos" LinkedOne="Harrison Tate" LinkedTwo="Flare" firstLink="/Photos" secondLink="/" thirdLink="/flare"/>
         <div id="img-container" className="row">
             <div className="column">
                 {data.allContentfulImages.nodes.map(node => (
