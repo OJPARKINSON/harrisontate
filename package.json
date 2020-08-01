@@ -13,7 +13,7 @@
     "gatsby-plugin-netlify-cms": "^3.0.18",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.2",
-    "gatsby-plugin-s3": "^0.3.3",
+    "gatsby-plugin-s3": "^0.3.4",
     "gatsby-plugin-sharp": "^2.6.16",
     "gatsby-source-contentful": "^2.2.6",
     "gatsby-source-filesystem": "^2.2.2",
