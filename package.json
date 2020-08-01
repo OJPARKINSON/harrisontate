@@ -26,7 +26,8 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-player": "^1.11.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "snyk": "^1.369.2"
   },
   "keywords": [
     "gatsby"
@@ -37,7 +38,9 @@
     "dev": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
@@ -48,5 +51,6 @@
   },
   "bugs": {
     "url": "https://github.com/OJPARKINSON/harrisontate2/issues"
-  }
+  },
+  "snyk": true
 }
