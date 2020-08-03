@@ -11,13 +11,13 @@ import "../components/Header.css"
 
 const IndexPage = ({ data }) => {
   return (
-  <div className="container">
-    <Header styling="HeaderGroup" />
-    <Img alt={data.allContentfulAsset.nodes[0].description} preload="true" className="loader" fluid={data.allContentfulAsset.nodes[0].fluid} /> 
-    <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
-    <div className="Hero-Image">
-      <div className="scroll-downs"><div className="mousey"><div className="scroller"></div></div></div> 
-    </div>
+    <div className="container">
+      <Header styling="HeaderGroup" />
+      <Img alt={data.allContentfulAsset.nodes[0].description} preload="true" className="loader" fluid={data.allContentfulAsset.nodes[0].fluid} /> 
+      <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
+      <div className="Hero-Image">
+        <div className="scroll-downs"><div className="mousey"><div className="scroller"></div></div></div> 
+      </div>
       <div className="heroTitles">
         <h2>Pictures</h2>
       </div>
@@ -33,11 +33,11 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       <footer>
-      <h3>
-        © {new Date().getFullYear()}, Built by
-        {` `}
-        <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
-      </h3>
+        <h3>
+          © {new Date().getFullYear()}, Built by
+          {` `}
+          <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
+        </h3>
       </footer>
     </div>
   )
@@ -66,7 +66,7 @@ export const query = graphql`
         alt
         socialLink
         image {
-          fluid {
+          fluid(quality: 100, maxHeight: 750, maxWidth: 550) {
             ...GatsbyContentfulFluid
           }
         }
