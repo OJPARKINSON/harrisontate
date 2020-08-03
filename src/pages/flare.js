@@ -11,7 +11,7 @@ const SecondPage = ({data}) => (
   <Layout>
     <div className="container flareLayout">
       <SEO title="Flare" />
-      <Header styling="HeaderGroup" title="Flare" LinkedOne="Photos" LinkedTwo="Harrison Tate" firstLink="/flare" secondLink="/Photos" thirdLink="" />
+      <Header styling="HeaderGroup" />
       <div className="imgContainer">
       {data.allContentfulGif.nodes.filter(node => node.tag === "flare-logo").map(node => (
         <img className="FlareLogo" alt={node.tag}  src={"https:" + node.img.file.url}/>

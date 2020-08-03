@@ -12,9 +12,9 @@ import "../components/Header.css"
 const IndexPage = ({ data }) => {
   return (
   <div className="container">
-        <Img alt={data.allContentfulAsset.nodes[0].description} preload="true" className="loader" fluid={data.allContentfulAsset.nodes[0].fluid} /> 
+    <Header styling="HeaderGroup" />
+    <Img alt={data.allContentfulAsset.nodes[0].description} preload="true" className="loader" fluid={data.allContentfulAsset.nodes[0].fluid} /> 
     <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
-    <Header styling="HeaderGroup" title="Harrison Tate" LinkedOne="Photos" LinkedTwo="Lookbook" firstLink="/" secondLink="/Photos" thirdLink="/flare" />
     <div className="Hero-Image">
       <div className="scroll-downs"><div className="mousey"><div className="scroller"></div></div></div> 
     </div>
