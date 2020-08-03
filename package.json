@@ -52,5 +52,8 @@
   "bugs": {
     "url": "https://github.com/OJPARKINSON/harrisontate2/issues"
   },
+  "engines": {
+    "node": ">=10.19.0"
+  },
   "snyk": true
 }
