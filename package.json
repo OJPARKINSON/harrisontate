@@ -7,18 +7,18 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "gatsby": "^2.20.12",
-    "gatsby-cli": "^2.12.14",
+    "gatsby-cli": "^2.7.20",
     "gatsby-image": "^2.2.7",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^3.0.18",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.2",
-    "gatsby-plugin-s3": "^0.3.4",
-    "gatsby-plugin-sharp": "^2.6.16",
+    "gatsby-plugin-s3": "^0.3.3",
+    "gatsby-plugin-sharp": "^2.2.9",
     "gatsby-source-contentful": "^2.2.6",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-source-instagram-all": "^2.0.5",
-    "gatsby-transformer-sharp": "^2.5.9",
+    "gatsby-transformer-sharp": "^2.4.3",
     "js-yaml": "^3.13.1",
     "node": "^11.15.0",
     "parse-filepath": "^1.0.2",
@@ -26,8 +26,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-player": "^1.11.1",
-    "styled-components": "^4.3.2",
-    "snyk": "^1.316.1"
+    "styled-components": "^4.3.2"
   },
   "keywords": [
     "gatsby"
@@ -38,9 +37,7 @@
     "dev": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
     "prettier": "^1.18.2"
@@ -51,9 +48,5 @@
   },
   "bugs": {
     "url": "https://github.com/OJPARKINSON/harrisontate2/issues"
-  },
-  "engines": {
-    "node": ">=10.19.0"
-  },
-  "snyk": true
+  }
 }
