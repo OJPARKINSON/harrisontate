@@ -26,3 +26,4 @@ amplify-gradle-config.json
 amplifyxc.config
 
 /public
+*.icloud
