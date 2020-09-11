@@ -9,15 +9,15 @@ import '../components/layout.css'
 import "../components/Header.css"
 
 
-const SecondPage = ({ data }) => (
+const SecondPage = ({ data = [] }) => (
     <Layout>
         <SEO title="Photos"/>
         <Header styling="PHeaderGroup HeaderGroup" />
         <div id="img-container" className="row">
             <div className="column">
-                {data.allContentfulImages.nodes.map(node => (
-                    <Img fluid={node.image.fluid} key={"i" + node.title} id={"i" + node.title} alt={node.alternative} />
-                ))}
+                {data?.allContentfulImages?.nodes?.map(node => 
+                    <img alt={node?.alternative}  src={"https:" + node?.image?.file?.url} key={"i" + node?.title} id={node?.id}/>
+                )}
             </div>
         </div>
         <footer>
@@ -33,15 +33,16 @@ const SecondPage = ({ data }) => (
 export default SecondPage;
 
 export const query = graphql`
-{
+  {
     allContentfulImages(filter: {title: {ne: "harrisonlanding"}}) {
       nodes {
         title
         alternative
         image {
-            fluid(quality: 100) {
-            ...GatsbyContentfulFluid
+          file {
+            url
           }
+          title
         }
       }
     }
