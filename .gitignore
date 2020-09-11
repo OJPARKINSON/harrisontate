@@ -8,3 +8,5 @@ config.env
 apiKeys.*
 *.env
 .env
+amplify
+*.icloud

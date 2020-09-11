@@ -18,6 +18,13 @@ const Layout = ({ props, children }) => (
         <div>
           <Helmet title={data.site.siteMetadata.title} meta={[{ name: 'description', content: 'sample'}, { name: 'keywords', content: 'sample, something'}]}/>
           {children}
+          <footer style={{color: 'white'}}>
+          <h3>
+            © {new Date().getFullYear()}, Built by
+            {` `}
+            <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
+          </h3>
+          </footer>
         </div>
     )}/>
 )

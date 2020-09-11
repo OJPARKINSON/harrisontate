@@ -34,13 +34,6 @@ const IndexPage = ({data}) => {
             ))}
         </div>
       </div>
-      <footer>
-      <h3>
-        © {new Date().getFullYear()}, Built by
-        {` `}
-        <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
-      </h3>
-      </footer>
     </div>
   )
 }
@@ -50,13 +43,13 @@ export const query = graphql`
 {
   allContentfulAsset {
     nodes {
+      id
       title
       description
       file {
         url
         contentType
       }
-      id
     }
   }
   allContentfulIndex(sort: {fields: order, order: ASC}) {
