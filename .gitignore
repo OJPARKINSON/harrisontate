@@ -10,3 +10,4 @@ apiKeys.*
 .env
 amplify
 *.icloud
+public
