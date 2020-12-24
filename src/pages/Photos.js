@@ -39,7 +39,7 @@ export const query = graphql`
       alternative
       image {
         title
-        fluid(quality: 100, maxHeight: 800, maxWidth: 600) {
+        fluid(quality: 100, maxWidth: 600) {
           srcWebp
           srcSetWebp
         }

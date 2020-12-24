@@ -5,7 +5,8 @@ import CardVid from '../components/cardVid'
 import Header from '../components/header'
 import "../components/Header.css"
 import ResponsivePlayer from '../components/ResponsivePlayer'
-import { graphql, Img } from 'gatsby'
+import { graphql } from 'gatsby'
+import Img from "gatsby-image"
 
 const SecondPage = ({data}) => (
   <Layout>
@@ -45,7 +46,7 @@ export const query = graphql`
         file {
           url
         }
-        fluid(quality: 100, maxWidth: 600, maxHeight: 1000) {
+        fluid(quality: 100, maxWidth: 600) {
           srcSetWebp
           srcWebp
         }
@@ -57,7 +58,7 @@ export const query = graphql`
     tag
     img {
       title
-      fluid(quality: 100, maxWidth: 600, maxHeight: 300) {
+      fluid(quality: 100, maxWidth: 600) {
         ...GatsbyContentfulFluid
       }
     }
