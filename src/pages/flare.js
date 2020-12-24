@@ -13,15 +13,15 @@ const SecondPage = ({data}) => (
       <SEO title="Flare" />
       <Header styling="HeaderGroup" />
       <div className="imgContainer">
-      {data.allContentfulGif.nodes.filter(node => node.tag === "flare-logo").map(node => (
-        <img className="FlareLogo" alt={node.tag}  src={"https:" + node.img.file.url}/>
+      {data.allContentfulGif.nodes.filter(({tag}) => tag === "flare-logo").map(node => (
+        <img className="FlareLogo" alt={node.tag}  src={"https:" + node.img.fluid.srcWebp}/>
       ))}
       </div>
-      {data.allContentfulGif.nodes.filter(node => node.contentfulid).reverse().map(node => (
+      {data.allContentfulGif.nodes.filter(({contentfulid}) => contentfulid).reverse().map(node => (
         <CardVid key={node.id} credits={"https://www.instagram.com/" + node.tag} igtag={"@" + node.tag} vid={"https:" + node.img.file.url} />
       ))}
       <div className="heroTitles" id="harrisonVid">
-        {data.allContentfulGif.nodes.filter(node => node.tag === "flare-video").map(node => (
+        {data.allContentfulGif.nodes.filter(({tag}) => tag === "flare-video").map(node => (
            <ResponsivePlayer playsinline key={node.tag} url={"https:" + node.img.file.url} />
           ))}
       </div>
@@ -45,13 +45,14 @@ export const query = graphql`
       tag
       contentfulid
       img {
-        file {
-          contentType
-          url
-          fileName
-        }
         title
-        description
+        file {
+          url
+        }
+        fluid(quality: 100, maxWidth: 600, maxHeight: 100) {
+          srcSetWebp
+          srcWebp
+        }
       }
     }
   }

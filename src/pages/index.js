@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
       </div>
       <div className="imageContainer">
         {data.allContentfulIndex.nodes.map(node => (
-          <LinkedImgs alt={node.alt} id={node.id} siteLink={node.socialLink} fluid={node.image.fluid} /> 
+          <LinkedImgs key={node.alt} alt={node.alt} id={node.id} siteLink={node.socialLink} fluid={node.image.fluid} /> 
         ))}
       </div>
       <div className="heroTitles">
@@ -54,7 +54,7 @@ export const query = graphql`
           url
           contentType
         }
-        fluid(quality: 100, maxHeight: 2304, maxWidth: 4096) {
+        fluid(quality: 100, maxHeight: 2304, maxWidth: 4096, toFormat: WEBP) {
           ...GatsbyContentfulFluid
         }
         id
@@ -66,7 +66,7 @@ export const query = graphql`
         alt
         socialLink
         image {
-          fluid(quality: 100, maxHeight: 750, maxWidth: 550) {
+          fluid(quality: 100, maxHeight: 750, maxWidth: 550, toFormat: WEBP) {
             ...GatsbyContentfulFluid
           }
         }
