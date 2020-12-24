@@ -137,11 +137,28 @@ h2 {
   margin: 0 auto;
 }
 .FlareLogo {
+  display: grid;
   justify-content: center;
-  width: 35vw;
-  margin: 0 32.5vw;
-  margin-top: 12vh;
+  overflow: unset !important;
 }
+
+.FlareLogo img {
+  height: 25vw !important;
+}
+
+.FlareLogo picture img {
+  padding: 0 !important;
+  position: unset !important;
+}
+
+.FlareLogo div {
+  position: unset !important;
+  width: 35vw;
+  padding: 0 !important;
+  margin: 5vw 0;
+}
+
+
 .Card {
   display: grid;
   display: -ms-grid;
