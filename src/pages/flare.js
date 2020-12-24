@@ -5,7 +5,7 @@ import CardVid from '../components/cardVid'
 import Header from '../components/header'
 import "../components/Header.css"
 import ResponsivePlayer from '../components/ResponsivePlayer'
-import { graphql } from 'gatsby'
+import { graphql, Img } from 'gatsby'
 
 const SecondPage = ({data}) => (
   <Layout>
@@ -13,7 +13,7 @@ const SecondPage = ({data}) => (
       <SEO title="Flare" />
       <Header styling="HeaderGroup" />
       <div className="imgContainer">
-        <img className="FlareLogo" alt={data.flareLogo.tag} srcSet={data.flareLogo.img.fluid.srcSetWebp}  src={"https:" + data.flareLogo.img.fluid.srcWebp}/>
+        <Img className="FlareLogo" alt={data.flareLogo.tag}  fluid={data.flareLogo.img.fluid}/>
       </div>
       {data.allContentfulGif.nodes.filter(({contentfulid}) => contentfulid).reverse().map(node => (
         <CardVid key={node.id} credits={"https://www.instagram.com/" + node.tag} igtag={"@" + node.tag} vid={"https:" + node.img.file.url} />
@@ -58,8 +58,7 @@ export const query = graphql`
     img {
       title
       fluid(quality: 100, maxWidth: 600, maxHeight: 300) {
-        srcSetWebp
-        srcWebp
+        ...GatsbyContentfulFluid
       }
     }
   }
