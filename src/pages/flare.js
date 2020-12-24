@@ -13,17 +13,13 @@ const SecondPage = ({data}) => (
       <SEO title="Flare" />
       <Header styling="HeaderGroup" />
       <div className="imgContainer">
-      {data.allContentfulGif.nodes.filter(({tag}) => tag === "flare-logo").map(node => (
-        <img className="FlareLogo" alt={node.tag}  src={"https:" + node.img.fluid.srcWebp}/>
-      ))}
+        <img className="FlareLogo" alt={data.flareLogo.tag} srcSet={data.flareLogo.img.fluid.srcSetWebp}  src={"https:" + data.flareLogo.img.fluid.srcWebp}/>
       </div>
       {data.allContentfulGif.nodes.filter(({contentfulid}) => contentfulid).reverse().map(node => (
         <CardVid key={node.id} credits={"https://www.instagram.com/" + node.tag} igtag={"@" + node.tag} vid={"https:" + node.img.file.url} />
       ))}
       <div className="heroTitles" id="harrisonVid">
-        {data.allContentfulGif.nodes.filter(({tag}) => tag === "flare-video").map(node => (
-           <ResponsivePlayer playsinline key={node.tag} url={"https:" + node.img.file.url} />
-          ))}
+        <ResponsivePlayer playsinline key={data.flareVideo.tag} url={"https:" + data.flareVideo.img.file.url} />
       </div>
     <footer style={{color: 'white'}}>
     <h3>
@@ -39,7 +35,7 @@ const SecondPage = ({data}) => (
 export default SecondPage
 export const query = graphql`
 {
-  allContentfulGif {
+  allContentfulGif(filter: {contentfulid: {gte: 0}}) {
     nodes {
       id
       tag
@@ -49,10 +45,31 @@ export const query = graphql`
         file {
           url
         }
-        fluid(quality: 100, maxWidth: 600, maxHeight: 100) {
+        fluid(quality: 100, maxWidth: 600, maxHeight: 1000) {
           srcSetWebp
           srcWebp
         }
+      }
+    }
+  }
+  flareLogo: contentfulGif(tag: {eq: "flare-logo"}) {
+    id
+    tag
+    img {
+      title
+      fluid(quality: 100, maxWidth: 600, maxHeight: 300) {
+        srcSetWebp
+        srcWebp
+      }
+    }
+  }
+  flareVideo: contentfulGif(tag: {eq: "flare-video"}) {
+    id
+    tag
+    img {
+      title
+      file {
+        url
       }
     }
   }

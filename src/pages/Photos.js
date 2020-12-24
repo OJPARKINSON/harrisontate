@@ -15,7 +15,7 @@ const SecondPage = ({ data }) => (
         <div id="img-container" className="row">
             <div className="column">
                 {data?.allContentfulImages?.nodes?.map(node => 
-                    <img alt={node?.alternative}  src={"https:" + node?.image?.fluid?.srcWebp} key={"i" + node?.title} id={node?.id}/>
+                    <img alt={node?.alternative} srcSet={node.image.fluid.srcSetWebp}  src={"https:" + node?.image?.fluid?.srcWebp} key={"i" + node?.title} id={node?.id}/>
                 )}
             </div>
         </div>
@@ -41,6 +41,7 @@ export const query = graphql`
         title
         fluid(quality: 100, maxHeight: 800, maxWidth: 600) {
           srcWebp
+          srcSetWebp
         }
       }
     }
