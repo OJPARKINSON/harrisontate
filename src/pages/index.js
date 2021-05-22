@@ -66,7 +66,7 @@ export const query = graphql`
         alt
         socialLink
         image {
-          fluid(quality: 100, maxWidth: 500, toFormat: WEBP) {
+          fluid(quality: 80, maxWidth: 100, toFormat: WEBP) {
             ...GatsbyContentfulFluid
           }
         }

@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/lib/players/FilePlayer'
 import "../components/layout.css"
 
 const ResponsivePlayer = props => (
@@ -17,6 +17,5 @@ const ResponsivePlayer = props => (
         playsInline
         />
     </div>
-    
 )
 export default ResponsivePlayer

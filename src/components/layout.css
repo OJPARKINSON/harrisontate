@@ -88,9 +88,6 @@ h2 {
     background: white; 
     color: white;
   }
-  .imageContainer img {
-    height: 60vw !important;
-  }
   .leftCard {
     width: 100% !important;
   }
