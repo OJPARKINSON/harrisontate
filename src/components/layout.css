@@ -90,9 +90,11 @@ h2 {
   }
   .leftCard {
     width: 100% !important;
+    margin: 3vh auto !important;
   }
   .Card p {
     font-size: 3.5vw !important;
+    margin: 0 !important;
   }
   h3 {
     font-size: 5vw !important;
@@ -105,6 +107,12 @@ h2 {
   }
   .player-wrapper {
     width: 90% !important;
+  }
+  .FlareLogo img {
+    max-height: 25vw !important;
+    max-width: 30%;
+    margin: 0 auto;
+    padding: 30vw 0 0 0!important;
   }
 }
 .imageContainer {
@@ -140,21 +148,11 @@ h2 {
 }
 
 .FlareLogo img {
-  height: 25vw !important;
+  max-height: 25vw !important;
+  max-width: 30%;
+  margin: 0 auto;
+  padding: 9vw 0 2vw 0;
 }
-
-.FlareLogo picture img {
-  padding: 0 !important;
-  position: unset !important;
-}
-
-.FlareLogo div {
-  position: unset !important;
-  width: 35vw;
-  padding: 0 !important;
-  margin: 5vw 0;
-}
-
 
 .Card {
   display: grid;

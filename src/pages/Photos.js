@@ -2,20 +2,23 @@ import React from 'react'
 import SEO from '../components/seo'
 import Layout from '../components/layout';
 import { graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image' 
 
 import Header from '../components/header';
 import '../components/layout.css'
 import "../components/Header.css"
 
 
-const SecondPage = ({ data }) => (
+const SecondPage = ({ data }) => {
+  console.log(data?.allContentfulImages?.nodes)
+return (
     <Layout>
         <SEO title="Photos"/>
         <Header styling="PHeaderGroup HeaderGroup" />
         <div id="img-container" className="row">
             <div className="column">
                 {data?.allContentfulImages?.nodes?.map(node => 
-                    <img alt={node?.alternative} srcSet={node.image.fluid.srcSetWebp}  src={"https:" + node?.image?.fluid?.srcWebp} key={"i" + node?.title} id={node?.id}/>
+                    <GatsbyImage alt={node?.alternative} image={node.image.gatsbyImageData} key={"i" + node?.title} id={node?.id}/>
                 )}
             </div>
         </div>
@@ -27,7 +30,7 @@ const SecondPage = ({ data }) => (
             </h3>
         </footer>
     </Layout>
-);
+)};
 
 export default SecondPage;
 
@@ -39,10 +42,7 @@ export const query = graphql`
       alternative
       image {
         title
-        fluid(quality: 100, maxWidth: 600) {
-          srcWebp
-          srcSetWebp
-        }
+        gatsbyImageData
       }
     }
   }

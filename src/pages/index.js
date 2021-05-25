@@ -2,7 +2,7 @@ import React from 'react'
 import SEO from '../components/seo' 
 import Header from '../components/header'
 import { graphql } from 'gatsby'
-import Img from "gatsby-image"
+import {GatsbyImage} from "gatsby-plugin-image"
 
 import ResponsivePlayer from '../components/ResponsivePlayer'
 import LinkedImgs from '../components/linkedImg.js';
@@ -10,10 +10,11 @@ import "../components/layout.css"
 import "../components/Header.css"
 
 const IndexPage = ({ data }) => {
+  console.log(data.allContentfulAsset.nodes[0])
   return (
     <div className="container">
       <Header styling="HeaderGroup" />
-      <Img alt={data.allContentfulAsset.nodes[0].description} preload="true" className="loader" fluid={data.allContentfulAsset.nodes[0].fluid} /> 
+      <GatsbyImage alt={data.allContentfulAsset.nodes[0].description} preload="true" className="loader" image={data.allContentfulAsset.nodes[0].gatsbyImageData} /> 
       <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
       <div className="Hero-Image">
         <div className="scroll-downs"><div className="mousey"><div className="scroller"></div></div></div> 
@@ -23,7 +24,7 @@ const IndexPage = ({ data }) => {
       </div>
       <div className="imageContainer">
         {data.allContentfulIndex.nodes.map(node => (
-          <LinkedImgs key={node.alt} alt={node.alt} id={node.id} siteLink={node.socialLink} fluid={node.image.fluid} /> 
+          <LinkedImgs key={node.alt} alt={node.alt} id={node.id} siteLink={node.socialLink} image={node.image.gatsbyImageData} /> 
         ))}
       </div>
       <div className="heroTitles">
@@ -45,34 +46,41 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage
 export const query = graphql`
-  {
-    allContentfulAsset(filter: {title: {in: ["harrisonlanding", "Flare"]}}) {
-      nodes {
-        title
-        description
-        file {
-          url
-          contentType
-        }
-        fluid(quality: 100, maxWidth: 1000, toFormat: WEBP) {
-          ...GatsbyContentfulFluid
-        }
-        id
+{
+  allContentfulAsset(filter: {title: {in: ["harrisonlanding", "Flare"]}}) {
+    nodes {
+      title
+      description
+      file {
+        url
+        contentType
       }
-    }
-    allContentfulIndex(sort: {fields: order, order: ASC}) {
-      nodes {
-        title
-        alt
-        socialLink
-        image {
-          fluid(quality: 80, maxWidth: 100, toFormat: WEBP) {
-            ...GatsbyContentfulFluid
-          }
-        }
-        id
-        order
-      }
+      id
+      gatsbyImageData(
+        formats: WEBP
+        sizes: "(min-width: 100px) 1800px, 1400px, 200px"
+        width: 1000
+        layout: FULL_WIDTH
+        quality: 100
+      )
     }
   }
+  allContentfulIndex(sort: {fields: order, order: ASC}) {
+    nodes {
+      title
+      alt
+      socialLink
+      image {
+        gatsbyImageData(
+          formats: WEBP
+          sizes: "(min-width: 100px) 180px, 300px, 200px"
+          quality: 100
+          outputPixelDensities: [0.1, 0.5, 0.75, 1]
+        )
+      }
+      id
+      order
+    }
+  }
+}
 `
