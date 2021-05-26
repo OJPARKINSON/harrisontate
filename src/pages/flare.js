@@ -1,17 +1,17 @@
 import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { ResponsivePlayer } from '../components/ResponsivePlayer'
 import CardVid from '../components/cardVid'
 import Header from '../components/header'
-import "../components/Header.css"
-import ResponsivePlayer from '../components/ResponsivePlayer'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 import { graphql } from 'gatsby'
-import { GatsbyImage } from "gatsby-plugin-image"
+import '../components/Header.css'
 
 const SecondPage = ({data}) => (
   <Layout>
     <div className="container flareLayout">
-      <SEO title="Flare" />
+      <Seo title="Flare" />
       <Header styling="HeaderGroup" />
       <GatsbyImage className="FlareLogo" alt={data.flareLogo.tag}  image={data.flareLogo.img.gatsbyImageData}/>
       {data.allContentfulGif.nodes.filter(({contentfulid}) => contentfulid).reverse().map(node => (
@@ -29,9 +29,8 @@ const SecondPage = ({data}) => (
     </footer>
     </div>
   </Layout>
-)
+);
 
-export default SecondPage
 export const query = graphql`
 {
   allContentfulGif(filter: {contentfulid: {gte: 0}}) {
@@ -66,5 +65,6 @@ export const query = graphql`
       }
     }
   }
-}
-`
+}`
+
+export default SecondPage;

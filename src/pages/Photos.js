@@ -1,17 +1,17 @@
 import React from 'react'
-import SEO from '../components/seo'
-import Layout from '../components/layout';
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image' 
-
+import Layout from '../components/layout';
 import Header from '../components/header';
+import Seo from '../components/seo'
+
 import '../components/layout.css'
 import "../components/Header.css"
 
 
 const SecondPage = ({ data }) => (
   <Layout>
-      <SEO title="Photos"/>
+      <Seo title="Photos"/>
       <Header styling="PHeaderGroup HeaderGroup" />
       <div id="img-container" className="row">
           <div className="column">
@@ -30,8 +30,6 @@ const SecondPage = ({ data }) => (
   </Layout>
 );
 
-export default SecondPage;
-
 export const query = graphql`
 {
   allContentfulImages(filter: {title: {ne: "harrisonlanding"}}) {
@@ -46,3 +44,5 @@ export const query = graphql`
   }
 }
 `
+
+export default SecondPage;
