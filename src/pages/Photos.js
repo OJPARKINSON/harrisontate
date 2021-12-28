@@ -1,34 +1,37 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image' 
+import Img from "gatsby-image"
+import React from 'react'
+
 import Layout from '../components/layout';
 import Header from '../components/header';
-import Seo from '../components/seo'
-
+import SEO from '../components/seo'
 import '../components/layout.css'
 import "../components/Header.css"
 
 
 const SecondPage = ({ data }) => (
-  <Layout>
-      <Seo title="Photos"/>
-      <Header styling="PHeaderGroup HeaderGroup" />
-      <div id="img-container" className="row">
-          <div className="column">
-              {data?.allContentfulImages?.nodes?.map(node => 
-                  <GatsbyImage alt={node?.alternative} image={node.image.gatsbyImageData} key={"i" + node?.title} id={node?.id}/>
-              )}
-          </div>
-      </div>
-      <footer>
-          <h3>
-          © {new Date().getFullYear()}, Built by
-          {` `}
-          <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
-          </h3>
-      </footer>
-  </Layout>
+    <Layout>
+        <SEO title="Photos"/>
+        <Header styling="PHeaderGroup HeaderGroup" />
+        <div id="img-container" className="row">
+            <div className="column">
+                {data?.allContentfulImages?.nodes?.map(node =>
+                    <Img alt={node?.alternative} fluid={node?.image?.fluid} id={node?.id}/>
+                )}
+            </div>
+        </div>
+        <footer>
+            <h3>
+            © {new Date().getFullYear()}, Built by
+            {` `}
+            <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
+            </h3>
+        </footer>
+    </Layout>
 );
+
+export default SecondPage;
 
 export const query = graphql`
 {
