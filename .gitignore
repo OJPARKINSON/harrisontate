@@ -27,3 +27,4 @@ amplifyxc.config
 
 /public
 *.icloud
+.idea

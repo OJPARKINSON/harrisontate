@@ -1,11 +1,11 @@
-import React from 'react'
-import SEO from '../components/seo' 
-import Header from '../components/header'
-import { graphql } from 'gatsby'
 import Img from "gatsby-image"
+import { graphql } from 'gatsby'
+import React from 'react'
 
 import ResponsivePlayer from '../components/ResponsivePlayer'
 import LinkedImgs from '../components/linkedImg.js';
+import Header from '../components/header'
+import SEO from '../components/seo'
 import "../components/layout.css"
 import "../components/Header.css"
 
@@ -54,7 +54,7 @@ export const query = graphql`
           url
           contentType
         }
-        fluid(quality: 100, maxWidth: 1000, toFormat: WEBP) {
+        fluid(quality: 100, maxWidth: 600, toFormat: WEBP) {
           ...GatsbyContentfulFluid
         }
         id

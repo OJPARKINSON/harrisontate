@@ -1,12 +1,13 @@
+import { graphql } from 'gatsby'
+import Img from "gatsby-image"
 import React from 'react'
+
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import CardVid from '../components/cardVid'
 import Header from '../components/header'
 import "../components/Header.css"
 import ResponsivePlayer from '../components/ResponsivePlayer'
-import { graphql } from 'gatsby'
-import Img from "gatsby-image"
 
 const SecondPage = ({data}) => (
   <Layout>

@@ -1,9 +1,10 @@
-import React from 'react'
-import SEO from '../components/seo'
-import Layout from '../components/layout';
 import { graphql } from 'gatsby'
+import Img from "gatsby-image"
+import React from 'react'
 
+import Layout from '../components/layout';
 import Header from '../components/header';
+import SEO from '../components/seo'
 import '../components/layout.css'
 import "../components/Header.css"
 
@@ -15,7 +16,7 @@ const SecondPage = ({ data }) => (
         <div id="img-container" className="row">
             <div className="column">
                 {data?.allContentfulImages?.nodes?.map(node => 
-                    <img alt={node?.alternative} srcSet={node.image.fluid.srcSetWebp}  src={"https:" + node?.image?.fluid?.srcWebp} key={"i" + node?.title} id={node?.id}/>
+                    <Img alt={node?.alternative} fluid={node?.image?.fluid} id={node?.id}/>
                 )}
             </div>
         </div>
@@ -40,8 +41,7 @@ export const query = graphql`
       image {
         title
         fluid(quality: 100, maxWidth: 600) {
-          srcWebp
-          srcSetWebp
+          ...GatsbyContentfulFluid
         }
       }
     }
