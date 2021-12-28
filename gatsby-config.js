@@ -10,9 +10,11 @@ module.exports = {
     author: `@OliverParkinson`,
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-webpack-bundle-analyser-v2',
     {
       resolve: 'gatsby-source-contentful',
       options: {
