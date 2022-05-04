@@ -1,6 +1,6 @@
-import { graphql } from 'gatsby'
-import Img from "gatsby-image"
 import React from 'react'
+import { graphql } from 'gatsby'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -15,7 +15,7 @@ const SecondPage = ({data}) => (
       <SEO title="Flare" />
       <Header styling="HeaderGroup" />
       <div className="imgContainer">
-        <Img className="FlareLogo" alt={data.flareLogo.tag}  fluid={data.flareLogo.img.fluid}/>
+        <GatsbyImage className="FlareLogo" alt={data.flareLogo.tag}  image={data.flareLogo.img.gatsbyImageData}/>
       </div>
       {data.allContentfulGif.nodes.filter(({contentfulid}) => contentfulid).reverse().map(node => (
         <CardVid key={node.id} credits={"https://www.instagram.com/" + node.tag} igtag={"@" + node.tag} vid={"https:" + node.img.file.url} />
@@ -47,10 +47,7 @@ export const query = graphql`
         file {
           url
         }
-        fluid(quality: 100, maxWidth: 600) {
-          srcSetWebp
-          srcWebp
-        }
+        gatsbyImageData(layout: FIXED)
       }
     }
   }
@@ -59,9 +56,7 @@ export const query = graphql`
     tag
     img {
       title
-      fluid(quality: 100, maxWidth: 600) {
-        ...GatsbyContentfulFluid
-      }
+      gatsbyImageData(layout: FIXED)
     }
   }
   flareVideo: contentfulGif(tag: {eq: "flare-video"}) {

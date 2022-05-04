@@ -1,6 +1,6 @@
-import Img from "gatsby-image"
-import { graphql } from 'gatsby'
 import React from 'react'
+import { graphql } from 'gatsby'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import ResponsivePlayer from '../components/ResponsivePlayer'
 import LinkedImgs from '../components/linkedImg.js';
@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
   return (
     <div className="container">
       <Header styling="HeaderGroup" />
-      <Img alt={data.allContentfulAsset.nodes[0].description} preload="true" className="loader" fluid={data.allContentfulAsset.nodes[0].fluid} /> 
+      <GatsbyImage alt={data.allContentfulAsset.nodes[0].description} preload="true" className="loader" image={data.allContentfulAsset.nodes[0].gatsbyImageData} /> 
       <SEO title="Home" keywords={[`Harrison Tate`, `Portfolio`, `Photography`]} />
       <div className="Hero-Image">
         <div className="scroll-downs"><div className="mousey"><div className="scroller"></div></div></div> 
@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => {
       </div>
       <div className="imageContainer">
         {data.allContentfulIndex.nodes.map(node => (
-          <LinkedImgs key={node.alt} alt={node.alt} id={node.id} siteLink={node.socialLink} fluid={node.image.fluid} /> 
+          <LinkedImgs key={node.alt} alt={node.alt} id={node.id} siteLink={node.socialLink} image={node.image.gatsbyImageData} /> 
         ))}
       </div>
       <div className="heroTitles">
@@ -43,7 +43,6 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export default IndexPage
 export const query = graphql`
   {
     allContentfulAsset(filter: {title: {in: ["harrisonlanding", "Flare"]}}) {
@@ -54,9 +53,7 @@ export const query = graphql`
           url
           contentType
         }
-        fluid(quality: 100, maxWidth: 600, toFormat: WEBP) {
-          ...GatsbyContentfulFluid
-        }
+        gatsbyImageData(layout: FIXED)
         id
       }
     }
@@ -66,9 +63,7 @@ export const query = graphql`
         alt
         socialLink
         image {
-          fluid(quality: 100, maxWidth: 500, toFormat: WEBP) {
-            ...GatsbyContentfulFluid
-          }
+          gatsbyImageData
         }
         id
         order
@@ -76,3 +71,5 @@ export const query = graphql`
     }
   }
 `
+
+export default IndexPage

@@ -6,7 +6,7 @@ node_modules
 .DS_Store
 config.env
 apiKeys.*
-*.env
+.env
 .env
 
 #amplify

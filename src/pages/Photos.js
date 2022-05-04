@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Img from "gatsby-image"
-import React from 'react'
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Layout from '../components/layout';
 import Header from '../components/header';
@@ -17,7 +16,7 @@ const SecondPage = ({ data }) => (
         <div id="img-container" className="row">
             <div className="column">
                 {data?.allContentfulImages?.nodes?.map(node =>
-                    <Img alt={node?.alternative} fluid={node?.image?.fluid} id={node?.id}/>
+                    <GatsbyImage alt={node?.alternative} image={node?.image?.gatsbyImageData} id={node?.id}/>
                 )}
             </div>
         </div>
@@ -31,8 +30,6 @@ const SecondPage = ({ data }) => (
     </Layout>
 );
 
-export default SecondPage;
-
 export const query = graphql`
 {
   allContentfulImages(filter: {title: {ne: "harrisonlanding"}}) {
@@ -41,7 +38,7 @@ export const query = graphql`
       alternative
       image {
         title
-        gatsbyImageData
+        gatsbyImageData(layout: FIXED)
       }
     }
   }

@@ -20,6 +20,7 @@ a {
   /* background-image: url('../images/harrisonlanding.jpg'); */
   min-height: 100vh !important;
   width: 100% !important;
+  height: 100% !important;
   background-size: cover;
   background-position: center;
   position: relative;

@@ -1,7 +1,7 @@
 require('dotenv').config()
 
-var accessToken = process.env.CONTENTAC
-var host = process.env.CONTENTURL
+var accessToken = process.env.CONTENT__ACCESS_TOKEN
+var host = process.env.CONTENT_URL
 
 module.exports = {
   siteMetadata: {
@@ -11,10 +11,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-webpack-bundle-analyser-v2',
     {
       resolve: 'gatsby-source-contentful',
       options: {

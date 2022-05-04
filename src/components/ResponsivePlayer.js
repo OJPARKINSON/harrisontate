@@ -1,8 +1,8 @@
 import React from 'react'
-import ReactPlayer from 'react-player/lib/players/FilePlayer'
+import ReactPlayer from 'react-player'
 import "../components/layout.css"
 
-export const ResponsivePlayer = ({ url }) => (
+const ResponsivePlayer = ({ url }) => (
     <div className='player-wrapper'>
         <ReactPlayer
         className='react-player'
@@ -18,3 +18,5 @@ export const ResponsivePlayer = ({ url }) => (
         />
     </div>
 );
+
+export default ResponsivePlayer
