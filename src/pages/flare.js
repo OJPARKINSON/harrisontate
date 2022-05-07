@@ -47,7 +47,7 @@ export const query = graphql`
         file {
           url
         }
-        gatsbyImageData(layout: FIXED)
+        gatsbyImageData(sizes: "2000px 1500px 1000px" breakpoints: [400, 750, 1080, 1366, 1920] formats: [WEBP] quality: 100)
       }
     }
   }
@@ -56,7 +56,7 @@ export const query = graphql`
     tag
     img {
       title
-      gatsbyImageData(layout: FIXED)
+      gatsbyImageData(sizes: "2000px 1500px 1000px" breakpoints: [400, 750, 1080, 1366, 1920] formats: [WEBP] quality: 100)
     }
   }
   flareVideo: contentfulGif(tag: {eq: "flare-video"}) {

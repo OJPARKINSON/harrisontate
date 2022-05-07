@@ -53,7 +53,7 @@ export const query = graphql`
           url
           contentType
         }
-        gatsbyImageData(layout: FIXED)
+        gatsbyImageData(layout: FULL_WIDTH formats: [WEBP] quality: 100)
         id
       }
     }
@@ -63,7 +63,7 @@ export const query = graphql`
         alt
         socialLink
         image {
-          gatsbyImageData
+          gatsbyImageData(width: 300 breakpoints: [200, 300, 400, 500] formats: WEBP quality: 100)
         }
         id
         order

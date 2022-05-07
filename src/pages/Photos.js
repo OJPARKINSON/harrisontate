@@ -16,7 +16,7 @@ const SecondPage = ({ data }) => (
         <div id="img-container" className="row">
             <div className="column">
                 {data?.allContentfulImages?.nodes?.map(node =>
-                    <GatsbyImage alt={node?.alternative} image={node?.image?.gatsbyImageData} id={node?.id}/>
+                    <GatsbyImage key={node?.alternative} alt={node?.alternative} image={node?.image?.gatsbyImageData} id={node?.id}/>
                 )}
             </div>
         </div>
@@ -38,7 +38,7 @@ export const query = graphql`
       alternative
       image {
         title
-        gatsbyImageData(layout: FIXED)
+        gatsbyImageData(quality: 100 formats: [WEBP])
       }
     }
   }

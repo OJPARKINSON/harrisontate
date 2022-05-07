@@ -8,13 +8,11 @@ const ResponsivePlayer = ({ url }) => (
         className='react-player'
         preload="auto"
         muted
-        playing={true}
         controls={true}
         url={url}
         width='100%'
         height='100%'
         loop
-        playsInline
         />
     </div>
 );

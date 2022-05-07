@@ -84,10 +84,14 @@ h2 {
     font-size: 4.5vw !important;
   }
   .imageContainer {
-    grid-template-columns: repeat(2, auto) !important;
-    -ms-grid-template-columns: repeat(2, auto) !important;
+    grid-template-columns: repeat(1, auto) !important;
+    -ms-grid-template-columns: repeat(1, auto) !important;
     background: white; 
     color: white;
+  }
+  .imageContainer a div {
+    height: 100vw !important;
+    margin: 0 auto;
   }
   .leftCard {
     width: 100% !important;
@@ -124,9 +128,10 @@ h2 {
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   margin: 0 auto 8vh auto;  
 }
-.imageContainer img {
+.imageContainer a div {
   height: 45vw;
   width: 100%;
+  margin: 0 auto;
 }
 .player-wrapper {
   width: 77%;
