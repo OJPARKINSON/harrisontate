@@ -6,7 +6,7 @@
   "author": "Oliver Parkinson <olliepar01@gmail.com>",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "gatsby": "^3.13.0",
+    "gatsby": "^4.14.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-netlify-cms": "^6.4.0",
