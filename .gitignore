@@ -28,3 +28,4 @@ amplifyxc.config
 /public
 *.icloud
 .idea
+.vscode
