@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import ReactPlayer from 'react-player'
 
-import '../components/layout.css'
+import './layout.css'
 
 interface ResponsivePlayerProps {
   url: string

@@ -1,6 +1,7 @@
 import React from 'react'
-import '../components/layout.css'
 import { GatsbyImage } from 'gatsby-plugin-image'
+
+import './layout.css'
 
 interface LinkedImgsProps {
   siteLink: string

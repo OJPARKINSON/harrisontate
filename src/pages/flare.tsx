@@ -2,8 +2,8 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-import { Layout, Header, SEO, CardVid, ResponsivePlayer } from '../components'
-import '../components/Header.css'
+import { Layout, GifCard, ResponsivePlayer } from '@ui'
+import '../ui/Header.css'
 
 interface GalleryProps {
   data: {
@@ -30,7 +30,7 @@ interface GalleryProps {
         }
       }
     }
-    allContentfulGif: {
+    gifs: {
       nodes: [
         {
           contentfulid: string
@@ -44,6 +44,7 @@ interface GalleryProps {
 }
 
 export default function Gallery({ data }: GalleryProps) {
+  console.log(data)
   return (
     <div className="container flareLayout">
       <Layout title="Flare" styling="HeaderGroup">
@@ -54,15 +55,15 @@ export default function Gallery({ data }: GalleryProps) {
             image={data.flareLogo.img.gatsbyImageData}
           />
         </div>
-        {data.allContentfulGif.nodes
-          .filter((node) => node.contentfulid)
+        {data.gifs.nodes
+          .filter(({ contentfulid }) => contentfulid)
           .reverse()
-          .map((node) => (
-            <CardVid
-              key={node.id}
-              credits={'https://www.instagram.com/' + node.tag}
-              igtag={'@' + node.tag}
-              vid={'https:' + node.img.file.url}
+          .map(({ id, tag, img }) => (
+            <GifCard
+              key={id}
+              credits={'https://www.instagram.com/' + tag}
+              igtag={'@' + tag}
+              vid={'https:' + img.file.url}
             />
           ))}
         <div className="heroTitles" id="harrisonVid">
@@ -86,25 +87,7 @@ export default function Gallery({ data }: GalleryProps) {
 
 export const query = graphql`
   {
-    allContentfulGif(filter: { contentfulid: { gte: 0 } }) {
-      nodes {
-        id
-        tag
-        contentfulid
-        img {
-          title
-          file {
-            url
-          }
-          gatsbyImageData(
-            sizes: "2000px 1500px 1000px"
-            breakpoints: [400, 750, 1080, 1366, 1920]
-            formats: [WEBP]
-            quality: 100
-          )
-        }
-      }
-    }
+    ...gifs
     flareLogo: contentfulGif(tag: { eq: "flare-logo" }) {
       id
       tag

@@ -13,12 +13,20 @@ module.exports = {
     `gatsby-plugin-image`,
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-alias-imports`,
+      options: {
+        aliases: {
+          '@ui': 'src/ui/',
+        },
+      },
+    },
+    {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: 'vmhm8j7yot4g',
         accessToken,
-        host
-      }
+        host,
+      },
     },
-  ]
+  ],
 }

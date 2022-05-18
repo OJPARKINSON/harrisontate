@@ -2,9 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-import { SEO, Header, Layout } from '../components'
-import '../components/layout.css'
-import '../components/Header.css'
+import { Layout } from '@ui'
 
 interface GalleryProps {
   data: {
@@ -32,6 +30,7 @@ const Gallery = ({ data }: GalleryProps) => (
             alt={alternative}
             image={image?.gatsbyImageData}
             id={id}
+            style={{ width: '100%' }}
           />
         ))}
       </div>
@@ -46,6 +45,7 @@ const Gallery = ({ data }: GalleryProps) => (
   </Layout>
 )
 
+export default Gallery
 export const query = graphql`
   {
     allContentfulImages(filter: { title: { ne: "harrisonlanding" } }) {
@@ -54,11 +54,15 @@ export const query = graphql`
         alternative
         image {
           title
-          gatsbyImageData(quality: 100, formats: [WEBP])
+          gatsbyImageData(
+            width: 300
+            breakpoints: [200, 300, 400, 450]
+            formats: [WEBP]
+            placeholder: BLURRED
+            quality: 100
+          )
         }
       }
     }
   }
 `
-
-export default Gallery

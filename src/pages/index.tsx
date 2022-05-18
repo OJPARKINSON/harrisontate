@@ -2,10 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-import { Header, SEO, LinkedImgs, ResponsivePlayer } from '../components'
-
-import '../components/layout.css'
-import '../components/Header.css'
+import { LinkedImgs, ResponsivePlayer, Layout } from '@ui'
 
 interface HomeProps {
   data: {
@@ -47,16 +44,11 @@ interface HomeProps {
 
 const IndexPage = ({ data }: HomeProps) => {
   return (
-    <div className="container">
-      <Header styling="HeaderGroup" />
+    <Layout styling="HeaderGroup" title="Home">
       <GatsbyImage
         alt={data.harrisonlanding.nodes[0].description}
         className="loader"
         image={data.harrisonlanding.nodes[0].gatsbyImageData}
-      />
-      <SEO
-        title="Home"
-        keywords={[`Harrison Tate`, `Portfolio`, `Photography`]}
       />
       <div className="Hero-Image">
         <div className="scroll-downs">
@@ -96,7 +88,7 @@ const IndexPage = ({ data }: HomeProps) => {
           <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
         </h3>
       </footer>
-    </div>
+    </Layout>
   )
 }
 
@@ -112,7 +104,12 @@ export const query = graphql`
           url
           contentType
         }
-        gatsbyImageData(layout: FULL_WIDTH, formats: [WEBP], quality: 100)
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          formats: [WEBP]
+          quality: 100
+          placeholder: BLURRED
+        )
         id
       }
     }
