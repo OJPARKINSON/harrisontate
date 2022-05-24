@@ -7,10 +7,16 @@ import '../ui/Header.css'
 interface LayoutProps {
   title?: string
   styling?: string
+  whiteFooter?: boolean
   children: React.ReactNode
 }
 
-const Layout: React.FC<LayoutProps> = ({ title, styling, children }) => {
+const Layout: React.FC<LayoutProps> = ({
+  title,
+  styling,
+  children,
+  whiteFooter,
+}) => {
   return (
     <div className="container">
       <SEO
@@ -19,6 +25,13 @@ const Layout: React.FC<LayoutProps> = ({ title, styling, children }) => {
       />
       <Header styling={styling || ''} />
       {children}
+      <footer style={{ color: whiteFooter ? 'white' : 'black' }}>
+        <h3>
+          © {new Date().getFullYear()}, Built by
+          {` `}
+          <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
+        </h3>
+      </footer>
     </div>
   )
 }

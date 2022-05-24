@@ -43,47 +43,37 @@ interface GalleryProps {
   }
 }
 
-export default function Gallery({ data }: GalleryProps) {
-  console.log(data)
-  return (
-    <div className="container flareLayout">
-      <Layout title="Flare" styling="HeaderGroup">
-        <div className="imgContainer">
-          <GatsbyImage
-            className="FlareLogo"
-            alt={data.flareLogo.tag}
-            image={data.flareLogo.img.gatsbyImageData}
+export default ({ data }: GalleryProps) => (
+  <div className="container flareLayout">
+    <Layout title="Flare" styling="HeaderGroup" whiteFooter={true}>
+      <div className="imgContainer">
+        <GatsbyImage
+          className="FlareLogo"
+          alt={data.flareLogo.tag}
+          image={data.flareLogo.img.gatsbyImageData}
+        />
+      </div>
+      {data.gifs.nodes
+        .filter(({ contentfulid }) => contentfulid)
+        .reverse()
+        .map(({ id, tag, img }) => (
+          <GifCard
+            key={id}
+            credits={'https://www.instagram.com/' + tag}
+            igtag={'@' + tag}
+            vid={'https:' + img.file.url}
           />
-        </div>
-        {data.gifs.nodes
-          .filter(({ contentfulid }) => contentfulid)
-          .reverse()
-          .map(({ id, tag, img }) => (
-            <GifCard
-              key={id}
-              credits={'https://www.instagram.com/' + tag}
-              igtag={'@' + tag}
-              vid={'https:' + img.file.url}
-            />
-          ))}
-        <div className="heroTitles" id="harrisonVid">
-          <ResponsivePlayer
-            playsinline={true}
-            key={data.flareVideo.tag}
-            url={'https:' + data.flareVideo.img.file.url}
-          />
-        </div>
-        <footer style={{ color: 'white' }}>
-          <h3>
-            © {new Date().getFullYear()}, Built by
-            {` `}
-            <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
-          </h3>
-        </footer>
-      </Layout>
-    </div>
-  )
-}
+        ))}
+      <div className="heroTitles" id="harrisonVid">
+        <ResponsivePlayer
+          playsinline={true}
+          key={data.flareVideo.tag}
+          url={'https:' + data.flareVideo.img.file.url}
+        />
+      </div>
+    </Layout>
+  </div>
+)
 
 export const query = graphql`
   {

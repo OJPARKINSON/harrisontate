@@ -35,13 +35,6 @@ const Gallery = ({ data }: GalleryProps) => (
         ))}
       </div>
     </div>
-    <footer>
-      <h3>
-        © {new Date().getFullYear()}, Built by
-        {` `}
-        <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
-      </h3>
-    </footer>
   </Layout>
 )
 

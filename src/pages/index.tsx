@@ -42,55 +42,46 @@ interface HomeProps {
   }
 }
 
-const IndexPage = ({ data }: HomeProps) => {
-  return (
-    <Layout styling="HeaderGroup" title="Home">
-      <GatsbyImage
-        alt={data.harrisonlanding.nodes[0].description}
-        className="loader"
-        image={data.harrisonlanding.nodes[0].gatsbyImageData}
-      />
-      <div className="Hero-Image">
-        <div className="scroll-downs">
-          <div className="mousey">
-            <div className="scroller"></div>
-          </div>
+const IndexPage = ({ data }: HomeProps) => (
+  <Layout styling="HeaderGroup" title="Home">
+    <GatsbyImage
+      alt={data.harrisonlanding.nodes[0].description}
+      className="loader"
+      image={data.harrisonlanding.nodes[0].gatsbyImageData}
+    />
+    <div className="Hero-Image">
+      <div className="scroll-downs">
+        <div className="mousey">
+          <div className="scroller"></div>
         </div>
       </div>
-      <div className="heroTitles">
-        <h2>Pictures</h2>
+    </div>
+    <div className="heroTitles">
+      <h2>Pictures</h2>
+    </div>
+    <div className="imageContainer">
+      {data.allContentfulIndex.nodes.map((node) => (
+        <LinkedImgs
+          key={node.alt}
+          alt={node.alt}
+          id={node.id}
+          siteLink={node.socialLink}
+          image={node.image.gatsbyImageData}
+        />
+      ))}
+    </div>
+    <div className="heroTitles">
+      <h2>Lookbook</h2>
+      <div className="heroTitles" id="harrisonVid">
+        <ResponsivePlayer
+          playsinline={true}
+          key={data.flareVideo.tag}
+          url={'https:' + data.flareVideo.img.file.url}
+        />
       </div>
-      <div className="imageContainer">
-        {data.allContentfulIndex.nodes.map((node) => (
-          <LinkedImgs
-            key={node.alt}
-            alt={node.alt}
-            id={node.id}
-            siteLink={node.socialLink}
-            image={node.image.gatsbyImageData}
-          />
-        ))}
-      </div>
-      <div className="heroTitles">
-        <h2>Lookbook</h2>
-        <div className="heroTitles" id="harrisonVid">
-          <ResponsivePlayer
-            playsinline={true}
-            key={data.flareVideo.tag}
-            url={'https:' + data.flareVideo.img.file.url}
-          />
-        </div>
-      </div>
-      <footer>
-        <h3>
-          © {new Date().getFullYear()}, Built by
-          {` `}
-          <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
-        </h3>
-      </footer>
-    </Layout>
-  )
-}
+    </div>
+  </Layout>
+)
 
 export const query = graphql`
   {
