@@ -16,3 +16,5 @@ export async function fetchGraphQL(query: string, preview = false) {
 
   return entries?.data
 }
+
+export default fetchGraphQL

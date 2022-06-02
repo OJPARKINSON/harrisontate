@@ -1,4 +1,4 @@
-import * as React from 'react'
+import Head from 'next/head'
 
 import { Header } from '@/components'
 
@@ -17,6 +17,9 @@ const Layout: React.FC<LayoutProps> = ({
 }) => {
   return (
     <div className="container">
+      <Head>
+        <title>Harrison Tate | {title}</title>
+      </Head>
       <Header styling={styling || ''} />
       {children}
       <footer style={{ color: whiteFooter ? 'white' : 'black' }}>

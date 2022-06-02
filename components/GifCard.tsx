@@ -1,4 +1,4 @@
-import React from 'react'
+import Link from 'next/link'
 
 interface CardVidProps {
   vid: string
@@ -17,15 +17,15 @@ const GifCard = (props: CardVidProps) => (
       preload="auto"
       autoPlay
       muted
-    ></video>
-    <a
+    />
+    <Link
       target="_blank"
       rel="noopener noreferrer"
       className="igtag"
       href={props.credits}
     >
-      <p>{props.igtag}</p>
-    </a>
+      {props.igtag}
+    </Link>
   </div>
 )
 

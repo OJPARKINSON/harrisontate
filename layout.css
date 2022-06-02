@@ -1,0 +1,273 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0px;
+  font-size: 1.5rem;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.3;
+  box-sizing: border-box;
+}
+img {
+  -webkit-user-drag: none;
+}
+a {
+  color: white;
+  font-size: 2vw;
+  font-weight: 700;
+  text-decoration: none;
+  filter: none;
+}
+.loader {
+  /* background-image: url('../images/harrisonlanding.jpg'); */
+  min-height: 100vh !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+
+.heroTitles {
+  margin: 0;
+  width: 100% !important;
+  position: relative;
+  text-align: center;
+}
+.firstPage h1 {
+  animation: HeroAnimation 3s forwards cubic-bezier(0.02, 0.8, 0.2, 1);
+  animation-delay: 0.15s;
+  opacity: 0;
+}
+.Hero p {
+  color: rgba(225, 225, 225, 0.8);
+  font-size: 30px;
+  line-height: 1.5;
+  animation: HeroAnimation 3s forwards cubic-bezier(0.02, 0.8, 0.2, 1);
+}
+h2 {
+  font-size: 4vw;
+  margin-top: 2vh;
+}
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 740px) {
+  .loader {
+    min-height: 40vh;
+  }
+  .Hero p {
+    font-size: 24px;
+  }
+  .HeaderGroup {
+    grid-gap: 1px;
+    grid-template-columns: repeat(6, auto) !important;
+    -ms-grid-template-columns: repeat(6, auto) !important;
+  }
+  .column {
+    column-count: 2 !important;
+    column-fill: balance;
+    transition: 0.7s;
+  }
+  h1 {
+    font-size: 5vw !important;
+  }
+  a {
+    margin: 0;
+    font-size: 4.5vw !important;
+  }
+  .imageContainer {
+    grid-template-columns: repeat(1, auto) !important;
+    -ms-grid-template-columns: repeat(1, auto) !important;
+    background: white;
+    color: white;
+  }
+  .imageContainer a div {
+    height: 100vw !important;
+    margin: 0 auto;
+  }
+  .leftCard {
+    width: 100% !important;
+    margin: 3vh auto !important;
+  }
+  .Card p {
+    font-size: 3.5vw !important;
+    margin: 0 !important;
+  }
+  h3 {
+    font-size: 5vw !important;
+  }
+  .scroll-downs {
+    display: none;
+  }
+  #lastImg {
+    display: none;
+  }
+  .player-wrapper {
+    width: 90% !important;
+  }
+  .FlareLogo img {
+    max-height: 25vw !important;
+    width: 100% !important;
+    padding: 23vw 0 2vw 0 !important;
+  }
+}
+.imageContainer {
+  width: 95%;
+  display: grid;
+  grid-gap: 2vw;
+  grid-template-columns: repeat(3, auto);
+  -ms-grid-template-columns: repeat(3, auto);
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  margin: 0 auto 8vh auto;
+}
+.imageContainer a div {
+  height: 45vw;
+  width: 100%;
+  margin: 0 auto;
+}
+.player-wrapper {
+  width: 77%;
+  height: auto;
+  margin: 0 auto 8vh auto;
+}
+.container {
+  margin: 0 auto;
+}
+.flareLayout {
+  background: black;
+  width: 100%;
+  margin: 0 auto;
+}
+.FlareLogo {
+  display: grid !important;
+  justify-content: center !important;
+  overflow: unset !important;
+  width: 30% !important;
+  margin: 0 auto !important;
+}
+
+.FlareLogo img {
+  max-height: 25vw !important;
+  width: 100% !important;
+  padding: 9vw 0 2vw 0 !important;
+}
+
+.Card {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 100% auto;
+  -ms-grid-template-columns: 100% auto;
+  margin: 0 25vw;
+  grid-gap: 20px;
+  grid-template-rows: auto 100%;
+  -ms-grid-template-rows: auto 100%;
+}
+.leftCard {
+  margin: 5vh auto;
+  width: 70%;
+  float: left;
+}
+.Card p {
+  color: rgba(225, 255, 255, 0.8);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5vw;
+  justify-self: center;
+  align-self: center;
+  margin: 0 0 20px 20px;
+}
+#img-container {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 100vw;
+  padding: 10vh 0;
+  background: white;
+  color: white;
+}
+.column {
+  column-count: 3;
+  column-fill: balance;
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+  padding: 0 4px;
+  margin-top: 8px;
+}
+.igtag {
+  margin: 0 auto;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  max-height: 10vh;
+}
+footer {
+  margin-left: 1vw;
+  height: 10vh;
+}
+h3 {
+  font-size: 2vw;
+  margin: 0;
+}
+footer a {
+  color: inherit !important;
+  font-size: inherit !important;
+  margin: 0;
+}
+.scroll-downs {
+  position: absolute;
+  bottom: 1.5vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 2vw;
+  height: 4vw;
+}
+.mousey {
+  width: 0.2vw;
+  padding: 0.7vw 0.9vw;
+  height: 2vw;
+  border: 0.1vw solid #fff;
+  border-radius: 5vw;
+  opacity: 0.75;
+}
+.scroller {
+  width: 0.2vw;
+  height: 0.8vw;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+.altPhotos {
+  background: rgba(8, 9, 11, 0.8);
+  height: 10vh;
+}
+#harrisonVid {
+  margin-top: 5vh;
+}

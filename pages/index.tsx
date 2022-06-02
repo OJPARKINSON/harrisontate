@@ -1,9 +1,15 @@
-import { LinkedImgs, ResponsivePlayer, Layout } from '@/components'
+import { lazy } from 'react'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+
 import { fetchGraphQL } from '../lib/utils'
 
+const LinkedImgs = dynamic(import('../components/linkedImg'), { ssr: false })
+const Layout = dynamic(import('../components/Layout'), { ssr: false })
+const ResponsivePlayer = lazy(() => import('../components/ResponsivePlayer'))
+
 interface IndexProps {
-  harrisonlanding: {
+  harrisonLanding: {
     items: [
       {
         description: string
@@ -36,26 +42,22 @@ interface IndexProps {
 }
 
 export default function Index({
-  harrisonlanding,
+  harrisonLanding,
   IntroIMGs,
   FlareVideo,
 }: IndexProps) {
   return (
     <Layout styling="HeaderGroup" title="Home">
-      <Image
-        alt={harrisonlanding.items[0].description}
-        className="loader"
-        width={2220}
-        height={1680}
-        quality={100}
-        src={harrisonlanding.items[0].url}
-      />
       <div className="Hero-Image">
-        <div className="scroll-downs">
-          <div className="mousey">
-            <div className="scroller"></div>
-          </div>
-        </div>
+        <Image
+          alt={harrisonLanding.items[0].description}
+          className="loader"
+          layout="fill"
+          objectFit="cover"
+          height="100vh"
+          quality={100}
+          src={harrisonLanding.items[0].url}
+        />
       </div>
       <div className="heroTitles">
         <h2>Pictures</h2>
@@ -85,10 +87,10 @@ export default function Index({
   )
 }
 
-export async function getStaticProps({ preview = false }) {
+export async function getStaticProps() {
   const quote = `
   {
-    harrisonlanding: assetCollection(where: {title: "harrisonlanding"}) {
+    harrisonLanding: assetCollection(where: {title: "harrisonlanding"}) {
       items {
         title
         description
@@ -119,6 +121,6 @@ export async function getStaticProps({ preview = false }) {
   }
   `
   return {
-    props: { preview, ...((await fetchGraphQL(quote)) ?? []) },
+    props: { ...((await fetchGraphQL(quote)) ?? []) },
   }
 }

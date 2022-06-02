@@ -1,12 +1,14 @@
 # Project dependencies
 .cache
 node_modules
+/.next/
+/out/
+build/
 
 # Build directory
 .DS_Store
 config.env
 apiKeys.*
-.env
 .env
 
 #amplify
@@ -29,3 +31,35 @@ amplifyxc.config
 *.icloud
 .idea
 .vscode
+
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Next.js
+/.next/
+/out/
+
+# Production
+/build
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local ENV files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel

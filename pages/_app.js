@@ -1,5 +1,5 @@
-import 'styles/Header.css'
-import 'styles/layout.css'
+import 'Header.css'
+import 'layout.css'
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

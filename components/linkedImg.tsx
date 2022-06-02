@@ -8,9 +8,7 @@ interface LinkedImgsProps {
 }
 
 const LinkedImgs = ({ siteLink, alt, id, image }: LinkedImgsProps) => (
-  <a href={siteLink} target="_blank" rel="noopener noreferrer">
-    <Image alt={alt} id={id} src={image} width={600} height={1000} />
-  </a>
+  <Image alt={alt} id={id} src={image} width={600} height={1000} />
 )
 
 export default LinkedImgs

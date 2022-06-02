@@ -1,40 +1,26 @@
+import { lazy } from 'react'
 import Image from 'next/image'
-import { Layout, GifCard, ResponsivePlayer } from '@/components'
 
 import { fetchGraphQL } from '../lib/utils'
+import { Layout, GifCard } from '@/components'
+const ResponsivePlayer = lazy(() => import('../components/ResponsivePlayer'))
+
+interface items {
+  items: [
+    {
+      id: string
+      tag: string
+      img: {
+        url: string
+      }
+    }
+  ]
+}
 
 interface FlareProps {
-  gifs: {
-    items: [
-      {
-        id: string
-        tag: string
-        img: {
-          url: string
-        }
-      }
-    ]
-  }
-  FlareLogo: {
-    items: [
-      {
-        tag: string
-        img: {
-          url: string
-        }
-      }
-    ]
-  }
-  FlareVideo: {
-    items: [
-      {
-        tag: string
-        img: {
-          url: string
-        }
-      }
-    ]
-  }
+  gifs: items
+  FlareLogo: items
+  FlareVideo: items
 }
 
 export default function Flare({ gifs, FlareLogo, FlareVideo }: FlareProps) {

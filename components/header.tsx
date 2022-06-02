@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 
 interface HeaderProps {
@@ -13,10 +12,14 @@ const Header = ({ styling }: HeaderProps) => (
       </Link>
     </li>
     <li className="Photos">
-      <Link href="/Photos">Photos</Link>
+      <Link href="/Photos">
+        <a>Photos</a>
+      </Link>
     </li>
     <li className="Lookbook">
-      <Link href="/flare">Flare</Link>
+      <Link href="/flare">
+        <a>Flare</a>
+      </Link>
     </li>
   </ul>
 )

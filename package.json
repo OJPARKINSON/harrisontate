@@ -10,12 +10,13 @@
     "contentful-import": "^8.3.0",
     "dotenv": "^16.0.0",
     "js-yaml": "^4.1.0",
-    "next": "^12.0.7",
+    "next": "^12.1.6",
     "parse-filepath": "^1.0.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
     "react-player": "^2.10.0",
+    "sharp": "^0.30.6",
     "styled-components": "^5.3.5"
   },
   "keywords": [
@@ -25,7 +26,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "serve": "next serve",
+    "start": "next start",
     "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
