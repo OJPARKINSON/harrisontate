@@ -8,13 +8,14 @@ interface FlareProps {
     items: [
       {
         id: string
+        tag: string
         img: {
           url: string
         }
       }
     ]
   }
-  flareLogo: {
+  FlareLogo: {
     items: [
       {
         tag: string
@@ -24,7 +25,7 @@ interface FlareProps {
       }
     ]
   }
-  flareVideo: {
+  FlareVideo: {
     items: [
       {
         tag: string
@@ -36,7 +37,7 @@ interface FlareProps {
   }
 }
 
-export default function Flare({ gifs, FlareLogo, FlareVideo }: any) {
+export default function Flare({ gifs, FlareLogo, FlareVideo }: FlareProps) {
   return (
     <div className="container flareLayout">
       <Layout title="Flare" styling="HeaderGroup" whiteFooter={true}>
@@ -49,7 +50,7 @@ export default function Flare({ gifs, FlareLogo, FlareVideo }: any) {
             src={FlareLogo.items[0].img.url}
           />
         </div>
-        {gifs.items.reverse().map(({ id, tag, img }: any) => (
+        {gifs.items.reverse().map(({ id, tag, img }) => (
           <GifCard
             key={id}
             credits={'https://www.instagram.com/' + tag}

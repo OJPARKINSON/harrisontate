@@ -1,9 +1,4 @@
-import {
-  LinkedImgs,
-  ResponsivePlayer,
-  Layout,
-  ContentfulImage,
-} from '@/components'
+import { LinkedImgs, ResponsivePlayer, Layout } from '@/components'
 import Image from 'next/image'
 import { fetchGraphQL } from '../lib/utils'
 
