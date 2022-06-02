@@ -24,7 +24,7 @@
   "license": "MIT",
   "scripts": {
     "build": "next build",
-    "dev": "next develop",
+    "dev": "next dev",
     "serve": "next serve",
     "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN",
     "format": "prettier --write \"src/**/*.js\"",

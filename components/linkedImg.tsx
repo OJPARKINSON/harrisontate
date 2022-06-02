@@ -1,0 +1,16 @@
+import Image from 'next/image'
+
+interface LinkedImgsProps {
+  siteLink: string
+  alt: string
+  id: string
+  image: any
+}
+
+const LinkedImgs = ({ siteLink, alt, id, image }: LinkedImgsProps) => (
+  <a href={siteLink} target="_blank" rel="noopener noreferrer">
+    <Image alt={alt} id={id} src={image} width={600} height={1000} />
+  </a>
+)
+
+export default LinkedImgs

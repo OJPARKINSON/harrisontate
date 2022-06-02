@@ -1,61 +1,58 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import Image from 'next/image'
+import { Layout } from '@/components'
+import { fetchGraphQL } from '../lib/utils'
 
-import { Layout } from '@ui'
-
-interface GalleryProps {
-  data: {
-    allContentfulImages: {
-      nodes: [
-        {
-          id: string
-          alternative: string
-          image: {
-            gatsbyImageData: IGatsbyImageData
-          }
+interface PhotosProps {
+  images: {
+    items: [
+      {
+        id: string
+        alternative: string
+        image: {
+          url: string
         }
-      ]
-    }
+      }
+    ]
   }
 }
 
-const Gallery = ({ data }: GalleryProps) => (
-  <Layout title="Photos" styling="PHeaderGroup HeaderGroup">
-    <div id="img-container" className="row">
-      <div className="column">
-        {data?.allContentfulImages?.nodes?.map(({ alternative, image, id }) => (
-          <GatsbyImage
-            key={alternative}
-            alt={alternative}
-            image={image?.gatsbyImageData}
-            id={id}
-            style={{ width: '100%' }}
-          />
-        ))}
+export default function Photos({ images }: PhotosProps) {
+  return (
+    <Layout title="Photos" styling="PHeaderGroup HeaderGroup">
+      <div id="img-container" className="row">
+        <div className="column">
+          {images.items.map(({ alternative, image, id }) => (
+            <Image
+              width={600}
+              height={1000}
+              key={alternative}
+              alt={alternative}
+              src={image.url}
+              id={id}
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  </Layout>
-)
+    </Layout>
+  )
+}
 
-export default Gallery
-export const query = graphql`
+export async function getStaticProps({ preview = false }) {
+  const quote = `
   {
-    allContentfulImages(filter: { title: { ne: "harrisonlanding" } }) {
-      nodes {
+    images: imagesCollection(where: { title_not: "harrisonlanding" }) {
+      items {
         title
         alternative
         image {
           title
-          gatsbyImageData(
-            width: 300
-            breakpoints: [200, 300, 400, 450]
-            formats: [WEBP]
-            placeholder: BLURRED
-            quality: 100
-          )
+          url
         }
       }
     }
   }
 `
+  return {
+    props: { preview, ...((await fetchGraphQL(quote)) ?? []) },
+  }
+}
