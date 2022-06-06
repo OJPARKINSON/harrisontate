@@ -15,10 +15,11 @@
   transition: 0.8s cubic-bezier(0.02, 0.8, 0.2, 1);
   justify-items: center;
   background: rgba(8, 9, 11, 0.8);
+  padding: 0.5vw;
 }
 
-.HeaderGroup h1,
-.PHeaderGroup h1 {
+.HeaderGroup a,
+.PHeaderGroup a {
   margin: 1.5vh 0;
   color: inherit;
   font-size: 2.5vw;

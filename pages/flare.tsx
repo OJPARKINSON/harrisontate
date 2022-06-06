@@ -1,8 +1,12 @@
 import { lazy } from 'react'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
 
 import { fetchGraphQL } from '../lib/utils'
-import { Layout, GifCard } from '@/components'
+import { GifCard } from '@/components'
+
+const Layout = dynamic(import('../components/Layout'), { ssr: false })
+
 const ResponsivePlayer = lazy(() => import('../components/ResponsivePlayer'))
 
 interface items {
@@ -27,11 +31,13 @@ export default function Flare({ gifs, FlareLogo, FlareVideo }: FlareProps) {
   return (
     <div className="container flareLayout">
       <Layout title="Flare" styling="HeaderGroup" whiteFooter={true}>
-        <div className="imgContainer">
+        <div className="FlareContainer">
           <Image
-            className="FlareLogo"
-            height={400}
-            width={400}
+            height={100}
+            width={100}
+            sizes="100vw"
+            layout="responsive"
+            priority={true}
             alt={FlareLogo.items[0].tag}
             src={FlareLogo.items[0].img.url}
           />

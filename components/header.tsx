@@ -8,7 +8,7 @@ const Header = ({ styling }: HeaderProps) => (
   <ul className={styling}>
     <li>
       <Link href="/">
-        <h1>Harrison Tate</h1>
+        <a>Harrison Tate</a>
       </Link>
     </li>
     <li className="Photos">

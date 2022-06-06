@@ -9,7 +9,6 @@ interface CardVidProps {
 const GifCard = (props: CardVidProps) => (
   <div className="Card">
     <video
-      className="leftCard"
       src={props.vid}
       controls={false}
       loop

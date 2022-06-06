@@ -4,6 +4,7 @@ node_modules
 /.next/
 /out/
 build/
+.next/*
 
 # Build directory
 .DS_Store
