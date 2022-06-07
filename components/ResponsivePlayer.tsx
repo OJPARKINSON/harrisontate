@@ -1,8 +1,4 @@
-import React from 'react'
-import { graphql } from 'gatsby'
 import ReactPlayer from 'react-player'
-
-import './layout.css'
 
 interface ResponsivePlayerProps {
   url: string
@@ -26,18 +22,3 @@ const ResponsivePlayer = ({ url, playsinline }: ResponsivePlayerProps) => (
 )
 
 export default ResponsivePlayer
-
-export const query = graphql`
-  fragment flareVideo on Query {
-    flareVideo: contentfulGif(tag: { eq: "flare-video" }) {
-      id
-      tag
-      img {
-        title
-        file {
-          url
-        }
-      }
-    }
-  }
-`

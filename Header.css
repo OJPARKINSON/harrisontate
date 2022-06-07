@@ -1,0 +1,59 @@
+.HeaderGroup {
+  position: fixed;
+  z-index: 10;
+  list-style: none;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: white;
+  margin: 0 auto;
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: repeat(8, auto);
+  -ms-grid-template-columns: repeat(8, auto);
+  align-items: center;
+  width: 100vw;
+  transition: 0.8s cubic-bezier(0.02, 0.8, 0.2, 1);
+  justify-items: center;
+  background: rgba(8, 9, 11, 0.8);
+  padding: 0.5vw;
+}
+
+.HeaderGroup a,
+.PHeaderGroup a {
+  margin: 1.5vh 0;
+  color: inherit;
+  font-size: 2.5vw;
+}
+
+.Photos {
+  grid-column-start: 6;
+  -ms-grid-column-start: 6;
+}
+.LookBook {
+  grid-column-start: 7;
+  -ms-grid-column-start: 7;
+}
+.HeaderScrolled {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(8, 9, 11, 0.8);
+  color: white !important;
+}
+.Hero-Image {
+  height: 100vh;
+}
+@media (max-width: 640px) {
+  .HeaderGroup {
+    padding: 15px 0;
+  }
+  .HeaderGroup a:nth-child(4) {
+    display: none;
+  }
+  .Photos {
+    grid-column-start: 5 !important;
+    -ms-grid-column-start: 5 !important;
+  }
+  .HeroGroup {
+    padding: 100px 20px;
+  }
+}

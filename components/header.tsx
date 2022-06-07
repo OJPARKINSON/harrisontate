@@ -1,5 +1,4 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'next/link'
 
 interface HeaderProps {
   styling: string
@@ -8,15 +7,19 @@ interface HeaderProps {
 const Header = ({ styling }: HeaderProps) => (
   <ul className={styling}>
     <li>
-      <Link to="/">
-        <h1>Harrison Tate</h1>
+      <Link href="/">
+        <a>Harrison Tate</a>
       </Link>
     </li>
     <li className="Photos">
-      <Link to="/Photos">Photos</Link>
+      <Link href="/Photos">
+        <a>Photos</a>
+      </Link>
     </li>
     <li className="Lookbook">
-      <Link to="/flare">Flare</Link>
+      <Link href="/flare">
+        <a>Flare</a>
+      </Link>
     </li>
   </ul>
 )
