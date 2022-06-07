@@ -1,97 +1,130 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+<div id="top"></div>
+
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/OJPARKINSON/harrisontate">
   </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+<h3 align="center">Harrison Tate</h3>
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+  <p align="center">
+    Photography portfolio
+    <br />
+    <a href="https://github.com/OJPARKINSON/harrisontate"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/OJPARKINSON/harrisontate">View Demo</a>
+    ·
+    <a href="https://github.com/OJPARKINSON/harrisontate/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/OJPARKINSON/harrisontate/issues">Request Feature</a>
+  </p>
+</div>
 
-## 🚀 Quick start
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-1.  **Create a Gatsby site.**
+<!-- ABOUT THE PROJECT -->
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+## About The Project
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+I needed some portfolio work so I reached out to a friend who was interested in photography. I've rewritten the site more times than I can count, but I've always found it to be a fun and easy way to learn the latest technologies.
 
-1.  **Start developing.**
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-    Navigate into your new site’s directory and start it up.
+### Built With
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+- [Next.js](https://nextjs.org/) <3
 
-1.  **Open the source code and start editing!**
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-    Your site is now running at `http://localhost:8000`!
+<!-- GETTING STARTED -->
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+## Getting Started
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-## 🧐 What's inside?
+### Prerequisites
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+This is an example of how to list things you need to use the software and how to install them.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+### Installation
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+1. Clone the repo
+   ```sh
+   git clone https://github.com/OJPARKINSON/harrisiontate.git
+   ```
+2. Install NPM packages
+   ```sh
+   yarn install
+   ```
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+<!-- LICENSE -->
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+## License
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+<!-- CONTACT -->
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+## Contact
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+Your Name - [@Ollie_Par](https://twitter.com/Ollie_Par)
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+[contributors-shield]: https://img.shields.io/github/contributors/OJPARKINSON/harrisontate.svg?style=for-the-badge
+[contributors-url]: https://github.com/OJPARKINSON/harrisontate/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/OJPARKINSON/harrisontate.svg?style=for-the-badge
+[forks-url]: https://github.com/OJPARKINSON/harrisontate/network/members
+[stars-shield]: https://img.shields.io/github/stars/OJPARKINSON/harrisontate.svg?style=for-the-badge
+[stars-url]: https://github.com/OJPARKINSON/harrisontate/stargazers
+[issues-shield]: https://img.shields.io/github/issues/OJPARKINSON/harrisontate.svg?style=for-the-badge
+[issues-url]: https://github.com/OJPARKINSON/harrisontate/issues
+[license-shield]: https://img.shields.io/github/license/OJPARKINSON/harrisontate.svg?style=for-the-badge
+[license-url]: https://github.com/OJPARKINSON/harrisontate/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/oliver-parkinson/
+[product-screenshot]: images/screenshot.png
