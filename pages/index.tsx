@@ -3,9 +3,9 @@ import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
 import { fetchGraphQL } from '../lib/utils'
-import LinkedImgs from '@/components/linkedImg'
+import { LinkedImgs } from '@/components'
 
-const Layout = dynamic(import('../components/Layout'), { ssr: false })
+const Layout = dynamic(import('../components/layout'), { ssr: false })
 const ResponsivePlayer = lazy(() => import('../components/ResponsivePlayer'))
 
 interface IndexProps {

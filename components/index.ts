@@ -1,4 +1,4 @@
-import Layout from './Layout'
+import Layout from './layout'
 import GifCard from './GifCard'
 import Header from './header'
 import ResponsivePlayer from './ResponsivePlayer'
