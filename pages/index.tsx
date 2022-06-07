@@ -3,7 +3,7 @@ import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
 import { fetchGraphQL } from '../lib/utils'
-import { LinkedImgs } from '@/components'
+import LinkedImgs from '@/components/linkedImg'
 
 const Layout = dynamic(import('../components/Layout'), { ssr: false })
 const ResponsivePlayer = lazy(() => import('../components/ResponsivePlayer'))

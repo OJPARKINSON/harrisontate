@@ -3,7 +3,7 @@ import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
 import { fetchGraphQL } from '../lib/utils'
-import { GifCard } from '@/components'
+import GifCard from '@/components/GifCard'
 
 const Layout = dynamic(import('../components/Layout'), { ssr: false })
 
