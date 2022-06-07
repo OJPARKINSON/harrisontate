@@ -3,8 +3,8 @@ import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
 import { fetchGraphQL } from '../lib/utils'
+import { LinkedImgs } from '@/components'
 
-const LinkedImgs = dynamic(import('../components/linkedImg'), { ssr: false })
 const Layout = dynamic(import('../components/Layout'), { ssr: false })
 const ResponsivePlayer = lazy(() => import('../components/ResponsivePlayer'))
 
@@ -55,7 +55,9 @@ export default function Index({
           layout="fill"
           objectFit="cover"
           height="100vh"
-          quality={100}
+          width="100vw"
+          sizes="100vw"
+          quality="100"
           src={harrisonLanding.items[0].url}
         />
       </div>

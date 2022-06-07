@@ -21,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({
         <title>Harrison Tate | {title}</title>
       </Head>
       <Header styling={styling || ''} />
-      {children}
+      <main>{children}</main>
       <footer style={{ color: whiteFooter ? 'white' : 'black' }}>
         <h3>
           © {new Date().getFullYear()}, Built by
