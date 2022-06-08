@@ -94,6 +94,10 @@ This is an example of how to list things you need to use the software and how to
    yarn install
    ```
 
+To explore the schema with GraphiQL
+
+https://graphql.contentful.com/content/v1/spaces/{SPACE}/explore?access_token={CDA_TOKEN}
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- LICENSE -->
