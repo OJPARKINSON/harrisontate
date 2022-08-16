@@ -14,7 +14,7 @@
     "gatsby-plugin-react-helmet": "^5.4.0",
     "gatsby-plugin-s3": "^0.3.3",
     "gatsby-plugin-sharp": "^4.8.0",
-    "gatsby-source-contentful": "^2.3.50",
+    "gatsby-source-contentful": "^7.19.0",
     "gatsby-source-filesystem": "^4.4.0",
     "gatsby-source-instagram-all": "^5.2.1",
     "gatsby-transformer-sharp": "^4.8.0",
