@@ -1,12 +1,10 @@
-import { lazy } from 'react'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
 import { fetchGraphQL } from '../lib/utils'
-import { LinkedImgs } from '@/components'
+import { LinkedImgs, ResponsivePlayer } from '@/components'
 
 const Layout = dynamic(import('../components/layout'), { ssr: false })
-const ResponsivePlayer = lazy(() => import('../components/ResponsivePlayer'))
 
 interface IndexProps {
   harrisonLanding: {
@@ -52,29 +50,23 @@ export default function Index({
         <Image
           alt={harrisonLanding.items[0].description}
           className="loader"
-          layout="fill"
-          objectFit="cover"
-          height="100vh"
-          width="100vw"
-          sizes="100vw"
           quality="100"
+          height={1000}
+          width={3000}
+          placeholder="blur"
+          priority={true}
           src={harrisonLanding.items[0].url}
+          blurDataURL={harrisonLanding.items[0].url}
         />
       </div>
       <div className="heroTitles">
         <h2>Pictures</h2>
       </div>
-      <div className="imageContainer">
-        {IntroIMGs.items.map(({ alt, id, socialLink, image }) => (
-          <LinkedImgs
-            key={alt}
-            alt={alt}
-            id={id}
-            siteLink={socialLink}
-            image={image.url}
-          />
+      <ul className="imageContainer">
+        {IntroIMGs.items.map(({ alt, id, image }) => (
+          <LinkedImgs key={alt} alt={alt} id={id} image={image.url} />
         ))}
-      </div>
+      </ul>
       <div className="heroTitles">
         <h2>Lookbook</h2>
         <div className="heroTitles" id="harrisonVid">
@@ -104,7 +96,6 @@ export async function getStaticProps() {
       items {
         title
         alt
-        socialLink
         image {
           url
         }

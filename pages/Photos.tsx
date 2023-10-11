@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import { fetchGraphQL } from '../lib/utils'
-import dynamic from 'next/dynamic'
-
-const Layout = dynamic(import('../components/layout'), { ssr: false })
+import Layout from 'components/layout'
 
 interface PhotosProps {
   images: {

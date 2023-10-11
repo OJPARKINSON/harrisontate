@@ -1,14 +1,15 @@
 import Image from 'next/image'
 
 interface LinkedImgsProps {
-  siteLink: string
   alt: string
   id: string
   image: any
 }
 
-const LinkedImgs = ({ siteLink, alt, id, image }: LinkedImgsProps) => (
-  <Image alt={alt} id={id} src={image} width={600} height={1000} />
+const LinkedImgs = ({ alt, id, image }: LinkedImgsProps) => (
+  <li>
+    <Image alt={alt} id={id} src={image} height={300} width={300} />
+  </li>
 )
 
 export default LinkedImgs

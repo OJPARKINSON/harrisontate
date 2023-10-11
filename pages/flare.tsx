@@ -1,13 +1,10 @@
 import { lazy } from 'react'
-import Image from 'next/image'
-import dynamic from 'next/dynamic'
+import Image from 'next/legacy/image'
 
 import { fetchGraphQL } from '../lib/utils'
-import { GifCard } from '@/components'
-
-const Layout = dynamic(import('../components/layout'), { ssr: false })
-
-const ResponsivePlayer = lazy(() => import('../components/ResponsivePlayer'))
+import GifCard from 'components/GifCard'
+import Layout from 'components/layout'
+import ResponsivePlayer from 'components/ResponsivePlayer'
 
 interface items {
   items: [

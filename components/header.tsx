@@ -7,19 +7,13 @@ interface HeaderProps {
 const Header = ({ styling }: HeaderProps) => (
   <ul className={styling}>
     <li>
-      <Link href="/">
-        <a>Harrison Tate</a>
-      </Link>
+      <Link href="/">Harrison Tate</Link>
     </li>
     <li className="Photos">
-      <Link href="/Photos">
-        <a>Photos</a>
-      </Link>
+      <Link href="/Photos">Photos</Link>
     </li>
     <li className="Lookbook">
-      <Link href="/flare">
-        <a>Flare</a>
-      </Link>
+      <Link href="/flare">Flare</Link>
     </li>
   </ul>
 )
