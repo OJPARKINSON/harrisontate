@@ -5,19 +5,11 @@
   "version": "0.1.0",
   "author": "Oliver Parkinson <olliepar01@gmail.com>",
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^16.0.1",
-    "@types/react-helmet": "^6.1.11",
-    "contentful-import": "^9.4.101",
     "dotenv": "^16.5.0",
-    "js-yaml": "^4.1.0",
     "next": "^15.3.2",
-    "parse-filepath": "^1.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-helmet": "^6.1.0",
-    "react-player": "^2.16.0",
-    "sharp": "^0.34.1",
-    "styled-components": "^6.1.18"
+    "react-player": "^2.16.0"
   },
   "keywords": [
     "gatsby"
@@ -27,7 +19,6 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "setup": "node ./contentful/setup.js $CONTENTFUL_SPACE_ID $CONTENTFUL_MANAGEMENT_TOKEN",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "lint": "next lint"
