@@ -29,30 +29,37 @@
   grid-column-start: 6;
   -ms-grid-column-start: 6;
 }
+
 .LookBook {
   grid-column-start: 7;
   -ms-grid-column-start: 7;
 }
+
 .HeaderScrolled {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   background: rgba(8, 9, 11, 0.8);
   color: white !important;
 }
+
 .Hero-Image {
   height: 100vh;
 }
+
 @media (max-width: 640px) {
   .HeaderGroup {
     padding: 15px 0;
   }
+
   .HeaderGroup a:nth-child(4) {
     display: none;
   }
+
   .Photos {
     grid-column-start: 5 !important;
     -ms-grid-column-start: 5 !important;
   }
+
   .HeroGroup {
     padding: 100px 20px;
   }

@@ -1,5 +1,4 @@
-import { lazy } from 'react'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 
 import { fetchGraphQL } from '../lib/utils'
 import GifCard from 'components/GifCard'
