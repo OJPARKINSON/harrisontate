@@ -48,22 +48,22 @@ export default function Index({
     <Layout styling="HeaderGroup" title="Home">
       <div className="Hero-Image">
         <Image
-          alt={harrisonLanding.items[0].description}
+          alt={harrisonLanding?.items[0]?.description}
           className="loader"
           quality="100"
           height={1000}
           width={3000}
-          placeholder="blur"
+          blurDataURL={harrisonLanding?.items?.[0]?.url}
+          // placeholder="blur"
           priority={true}
-          src={harrisonLanding.items[0].url}
-          blurDataURL={harrisonLanding.items[0].url}
+          src={harrisonLanding?.items[0].url}
         />
       </div>
       <div className="heroTitles">
         <h2>Pictures</h2>
       </div>
       <ul className="imageContainer">
-        {IntroIMGs.items.map(({ alt, id, image }) => (
+        {IntroIMGs?.items.map(({ alt, id, image }) => (
           <LinkedImgs key={alt} alt={alt} id={id} image={image.url} />
         ))}
       </ul>
@@ -72,8 +72,8 @@ export default function Index({
         <div className="heroTitles" id="harrisonVid">
           <ResponsivePlayer
             playsinline={true}
-            key={FlareVideo.items[0].tag}
-            url={FlareVideo.items[0].img.url}
+            key={FlareVideo?.items[0].tag}
+            url={FlareVideo?.items[0].img.url}
           />
         </div>
       </div>
